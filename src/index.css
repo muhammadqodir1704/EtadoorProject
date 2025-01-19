@@ -1,10 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-<<<<<<< Updated upstream
-=======
 
 body {
     font-family: "Noto Sans Georgian", serif;
 }
->>>>>>> Stashed changes

@@ -1,17 +1,5 @@
-<<<<<<< Updated upstream
-import Contact from "./components/Contact";
-import "./App.css";
-
-export default function App() {
-  return (
-    <h1 className="text-3xl font-bold">
-      <Contact />
-    </h1>
-=======
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Header from "./components/Header";
 import MainPage from "./components/MainPage";
 import AllProducts from "./components/AllProducts";
 import Furnitura from "./pages/Furnitura";
@@ -20,14 +8,14 @@ import Kontakti from "./pages/Kontakti";
 import OKampani from "./pages/OKampani";
 import Pagonaj from "./pages/Pagonaj";
 import Sotrudnichat from "./pages/Sotrudnichat";
-// import Katalog from "./pages/Katalog";
+import Navbar from "./components/Navbar";  // Navbar import qilish
+import Header from "./components/Header";  // Header import qilish
 
 function App() {
-    
   return (
     <Router>
-      <Navbar />
-      <Header />
+      <Navbar /> 
+      <Header /> 
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/furnitura" element={<Furnitura />} />
@@ -38,9 +26,8 @@ function App() {
         <Route path="/sotrudnichat" element={<Sotrudnichat />} />
         <Route path="*" element={<div>404: Страница не найдена</div>} />
       </Routes>
-      <AllProducts />
+      <AllProducts/>
     </Router>
->>>>>>> Stashed changes
   );
 }
 
