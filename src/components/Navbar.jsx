@@ -11,7 +11,7 @@ const Navbar = () => {
           <a href="/" className="flex items-center">
             <img
               style={{ width: 141, height: 130 }}
-              src="/Images/LogoFirst.png"
+              src="/Images/logoMain.png"
               alt="Logo"
             />
             <p style={{ fontWeight: 700, fontSize: 18 }} className="ml-4">
