@@ -27,90 +27,101 @@ const Contact = () => {
         <div className="flex-1">
           <h2 className="text-base font-semibold">Офис г. Москва</h2>
           <ul className="mt-7 space-y-4 text-sm text-gray-800">
-            <li className="flex items-center">
-              <TbMapPin
-                className=" bg-amber-700 p-3"
+            <li className="flex items-center ">
+              <button
+                className=" bg-amber-700 p-2"
                 style={{
                   borderRadius: "50%",
-                }}
-              />
+                }}>
+                <TbMapPin className=" text-white" />
+              </button>
               <p className="ms-2 ">г. Москва, Красная площадь дом 1</p>
             </li>
             <li className="flex items-center">
-              <FiPhoneCall
-                className=" bg-amber-700 p-3"
+              <button
+                className=" bg-amber-700 p-2"
                 style={{
                   borderRadius: "50%",
-                }}
-              />
+                }}>
+                <FiPhoneCall className=" text-white" />
+              </button>
               <p className="ms-2">+7 499 375 77 65</p>
             </li>
             <li className="flex items-center">
-              <CiMail
-                className=" bg-amber-700 p-3"
+              <button
+                className=" bg-amber-700 p-2"
                 style={{
                   borderRadius: "50%",
-                }}
-              />
+                }}>
+                <CiMail className=" text-white" />
+              </button>
               <p className="ms-2">etadoor@yandex.ru</p>
             </li>
             <li className="flex items-center">
-              <FaRegClock
-                className=" bg-amber-700 p-3"
+              <button
+                className=" bg-amber-700 p-2"
                 style={{
                   borderRadius: "50%",
-                }}
-              />
+                }}>
+                <FaRegClock className=" text-white" />
+              </button>
               <p className="ms-2">ПН-ПТ с 9.00 до 19.00, СБ с 10.00 до 18.00</p>
             </li>
           </ul>
           <div className="flex items-center mt-12 gap-4 text-sm">
             <p>Связаться с нами:</p>
-            <MdCall
-              className=" bg-amber-700 p-3"
+            <button
+              className=" bg-amber-700 p-2"
               style={{
                 borderRadius: "50%",
-              }}
-            />
-            <BiSolidPhoneCall
-              className=" bg-amber-700 p-3"
+              }}>
+              <MdCall className=" text-white" />
+            </button>
+            <button
+              className=" bg-amber-700 p-2"
               style={{
                 borderRadius: "50%",
-              }}
-            />
-            <BsTelegram
-              className=" bg-amber-700 p-3"
+              }}>
+              <BiSolidPhoneCall className=" text-white" />
+            </button>
+            <button
+              className=" bg-amber-700 p-2"
               style={{
                 borderRadius: "50%",
-              }}
-            />
+              }}>
+              <BsTelegram className=" text-white" />
+            </button>
           </div>
           <div className="flex items-center mt-10 gap-4 text-sm">
             <p>Мы в соц.сетях:</p>
-            <FaVk
-              className=" bg-amber-700 p-3"
+            <button
+              className=" bg-amber-700 p-2"
               style={{
                 borderRadius: "50%",
-              }}
-            />
-            <FaYoutube
-              className=" bg-amber-700 p-3"
+              }}>
+              <FaVk className=" text-white" />
+            </button>
+            <button
+              className=" bg-amber-700 p-2"
               style={{
                 borderRadius: "50%",
-              }}
-            />
-            <FaInstagram
-              className=" bg-amber-700 p-3"
+              }}>
+              <FaYoutube className=" text-white" />
+            </button>
+            <button
+              className=" bg-amber-700 p-2"
               style={{
                 borderRadius: "50%",
-              }}
-            />
-            <FaFacebookF
-              className=" bg-amber-700 p-3"
+              }}>
+              <FaInstagram className=" text-white" />
+            </button>
+            <button
+              className=" bg-amber-700 p-2"
               style={{
                 borderRadius: "50%",
-              }}
-            />
+              }}>
+              <FaFacebookF className=" text-white" />
+            </button>
           </div>
         </div>
         <div className="flex-1">
@@ -206,30 +217,33 @@ const Contact = () => {
       <div className="flex justify-between mt-10">
         <ul className="mt-7 space-y-4 text-sm">
           <li className="flex items-center">
-            <CiMail
-              className=" bg-amber-700 p-3"
+            <button
+              className=" bg-amber-700 p-2"
               style={{
                 borderRadius: "50%",
-              }}
-            />
+              }}>
+              <CiMail className=" text-white" />
+            </button>
             <p className="ms-2">etadoor@yandex.ru</p>
           </li>
           <li className="flex items-center">
-            <FiPhoneCall
-              className=" bg-amber-700 p-3"
+            <button
+              className=" bg-amber-700 p-2"
               style={{
                 borderRadius: "50%",
-              }}
-            />
+              }}>
+              <FiPhoneCall className=" text-white" />
+            </button>
             <p className="ms-2">+7 499 375 77 65</p>
           </li>
           <li className="flex items-start">
-            <TbMapPin
-              className=" bg-amber-700 p-3"
+            <button
+              className=" bg-amber-700 p-2"
               style={{
                 borderRadius: "50%",
-              }}
-            />
+              }}>
+              <TbMapPin className=" text-white" />
+            </button>
             <div className="ms-2">
               <p>г. Москва, Красная площадь дом 1</p>
               <p>ПН-ПТ с 9.00 до 19.00, СБ с 10.00 до 18.00</p>
@@ -267,48 +281,55 @@ const Contact = () => {
         </div>
       </div>
       <div className=" flex gap-4 mt-8">
-        <MdCall
-          className="bg-amber-700 p-3 text-white"
+        <button
+          className=" bg-amber-700 p-2"
           style={{
             borderRadius: "50%",
-          }}
-        />
-        <BiSolidPhoneCall
-          className="bg-amber-700 p-3 text-white"
+          }}>
+          <MdCall className=" text-white" />
+        </button>
+        <button
+          className=" bg-amber-700 p-2"
           style={{
             borderRadius: "50%",
-          }}
-        />
-        <BsTelegram
-          className="bg-amber-700 p-3 text-white"
+          }}>
+          <BiSolidPhoneCall className=" text-white" />
+        </button>
+        <button
+          className=" bg-amber-700 p-2"
           style={{
             borderRadius: "50%",
-          }}
-        />
-        <FaVk
-          className="bg-amber-700 p-3 text-white"
+          }}>
+          <BsTelegram className=" text-white" />
+        </button>
+        <button
+          className=" bg-amber-700 p-2"
           style={{
             borderRadius: "50%",
-          }}
-        />
-        <FaYoutube
-          className="bg-amber-700 p-3 text-white"
+          }}>
+          <FaVk className=" text-white" />
+        </button>
+        <button
+          className=" bg-amber-700 p-2"
           style={{
             borderRadius: "50%",
-          }}
-        />
-        <FaInstagram
-          className="bg-amber-700 p-3 text-white"
+          }}>
+          <FaYoutube className=" text-white" />
+        </button>
+        <button
+          className=" bg-amber-700 p-2"
           style={{
             borderRadius: "50%",
-          }}
-        />
-        <FaFacebookF
-          className="bg-amber-700 p-3 text-white"
+          }}>
+          <FaInstagram className=" text-white" />
+        </button>
+        <button
+          className=" bg-amber-700 p-2"
           style={{
             borderRadius: "50%",
-          }}
-        />
+          }}>
+          <FaFacebookF className=" text-white" />
+        </button>
       </div>
       <div className="mt-10 flex gap-4">
         <button className="border border-black px-9 py-2">Яндекс</button>
