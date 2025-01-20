@@ -15,7 +15,7 @@ import { MdCall } from "react-icons/md";
 import { TbMapPin } from "react-icons/tb";
 import myImage from "../Images/angular.png";
 
-const Contact = () => {
+const Kontakti = () => {
   return (
     <div
       className="p-7"
@@ -335,4 +335,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Kontakti;
