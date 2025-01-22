@@ -1,10 +1,10 @@
-
-import Contact from "./components/Contact";
 import "./App.css";
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
+import Filter from "./components/Filter";
+
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import MainPage from "./components/MainPage";
 import AllProducts from "./components/AllProducts";
@@ -27,6 +27,7 @@ const router = createBrowserRouter([
         <Header />
         <MainPage />
         <AllProducts />
+        <Filter />
       </>
     ),
   },
