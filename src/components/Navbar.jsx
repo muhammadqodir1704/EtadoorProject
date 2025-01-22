@@ -2,6 +2,7 @@ import React from "react";
 import { FaViber, FaWhatsapp, FaTelegramPlane } from "react-icons/fa";
 import { MdOutlinePermPhoneMsg } from "react-icons/md";
 import { CiViewList } from "react-icons/ci";
+import Logo from "../Images/Frame 3.svg";
 
 const Navbar = () => {
   return (
@@ -12,10 +13,10 @@ const Navbar = () => {
             <img
               style={{ width: 141, height: 130 }}
 
-              src="/Images/LogoFirst.png"
+              src={Logo}
               alt="Logo"
               />
-            <p style={{ fontWeight: 700, fontSize: 18 }} className="ml-4">
+            <p style={{ fontWeight: 700, fontSize: 24  }} className="ml-4">
               Влагостойкие двери <br /> от производителя
             </p>
           </a>
