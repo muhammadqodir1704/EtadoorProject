@@ -18,12 +18,12 @@ import myImage from "../Images/angular.png";
 const Contact = () => {
   return (
     <div
-      className="p-7"
+      className=""
       style={{
         fontFamily: "'Circe', sans-serif",
       }}>
-      <h1>Контакты</h1>
-      <div className="flex flex-wrap gap-10 mt-10">
+      <h1 className=" p-7">Контакты</h1>
+      <div className="flex flex-wrap gap-10 mt-10 p-7">
         <div className="flex-1">
           <h2 className="text-base font-semibold">Офис г. Москва</h2>
           <ul className="mt-7 space-y-4 text-sm text-gray-800">
@@ -136,7 +136,6 @@ const Contact = () => {
             className="rounded-lg shadow-md"></iframe>
         </div>
       </div>
-
       <div className="flex flex-wrap gap-10 mt-12">
         <div className="flex-1">
           <iframe
@@ -214,7 +213,8 @@ const Contact = () => {
         </div>
       </div>
 
-      <div className="flex justify-between mt-10">
+      <hr className="border-2 border-amber-700 mt-8" />
+      <div className="flex justify-between mt-10 p-7">
         <ul className="mt-7 space-y-4 text-sm">
           <li className="flex items-center">
             <button
@@ -280,7 +280,7 @@ const Contact = () => {
           </button>
         </div>
       </div>
-      <div className=" flex gap-4 mt-8">
+      <div className=" flex gap-4 mt-8 p-7">
         <button
           className=" bg-amber-700 p-2"
           style={{
@@ -331,14 +331,14 @@ const Contact = () => {
           <FaFacebookF className=" text-white" />
         </button>
       </div>
-      <div className="mt-10 flex gap-4">
+      <div className="mt-10 flex gap-4 p-7">
         <button className="border border-black px-9 py-2">Яндекс</button>
         <button className="border border-black px-9 py-2">Я Бизнес</button>
         <button className="border border-black px-9 py-2">Яндекс</button>
         <button className="border border-black px-9 py-2">Я Бизнес</button>
         <button className="border border-black px-9 py-2">Яндекс</button>
       </div>
-      <div className=" flex gap-2 text-sm font-semibold mt-12">
+      <div className=" flex gap-2 text-sm font-semibold mt-12 p-7">
         <p>© Двери Etadoor. 2021 г</p>
         <p>Политика конфиденциальности</p>
         <div className=" flex gap-10">

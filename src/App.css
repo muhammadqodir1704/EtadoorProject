@@ -11,3 +11,10 @@
   background-color: red;
   border-radius: 4px;
 }
+
+.scroll-container ul li:hover {
+  border: 1px solid #007bff; /* Border rangini o'zingizga moslang */
+  border-radius: 4px; /* Burchaklarni yumaloqlash uchun */
+  padding: 4px; /* Border ichidagi matnni bo'sh joy bilan ajratish uchun */
+  background-color: #f0f8ff; /* Hover paytida fon rangi */
+}
