@@ -18,7 +18,7 @@ import myImage from "../Images/angular.png";
 const Kontakti = () => {
   return (
     <div
-      className="p-7"
+      className="p-7 container mx-auto"
       style={{
         fontFamily: "'Circe', sans-serif",
       }}>
