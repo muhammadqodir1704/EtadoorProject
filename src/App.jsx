@@ -28,6 +28,7 @@ const router = createBrowserRouter([
         <MainPage />
         <AllProducts />
         <Filter />
+        {/* <MultipleSelectCheckmarks /> */}
       </>
     ),
   },

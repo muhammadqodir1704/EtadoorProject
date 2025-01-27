@@ -64,4 +64,6 @@ const Sotrudnichat = () => {
   );
 };
 
-export default Sotrudnichat;
+export default Sotrudnichat
+// salom dunyo
+
