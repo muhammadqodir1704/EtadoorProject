@@ -7,3 +7,4 @@ const Sotrudnichat = () => {
 }
 
 export default Sotrudnichat
+// salom dunyo
