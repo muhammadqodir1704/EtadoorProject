@@ -6,17 +6,16 @@ import Logo from "../Images/Frame 3.svg";
 
 const Navbar = () => {
   return (
-    <nav className="bg-transparent p-4">
-      <div className="container mx-auto flex justify-between items-center">
-        <div className="flex justify-center items-center space-x-4">
+    <nav className="p-4 bg-transparent">
+      <div className="container flex items-center justify-between mx-auto">
+        <div className="flex items-center justify-center space-x-4">
           <a href="/" className="flex items-center">
             <img
               style={{ width: 141, height: 130 }}
-
               src={Logo}
               alt="Logo"
-              />
-            <p style={{ fontWeight: 700, fontSize: 24  }} className="ml-4">
+            />
+            <p style={{ fontWeight: 700, fontSize: 24 }} className="ml-4">
               Влагостойкие двери <br /> от производителя
             </p>
           </a>
@@ -34,27 +33,27 @@ const Navbar = () => {
             </p>
           </li>
           <div className="flex space-x-2">
-            <button className="text-white bg-custom-brown px-4 py-2 rounded-md">
+            <button className="px-4 py-2 text-white rounded-md bg-custom-brown">
               <FaWhatsapp style={{ fontSize: 28 }} />
             </button>
-            <button className="text-white bg-custom-brown px-4 py-2 rounded-md">
+            <button className="px-4 py-2 text-white rounded-md bg-custom-brown">
               <FaTelegramPlane style={{ fontSize: 28 }} />
             </button>
           </div>
         </ul>
         <div className="flex space-x-4">
-          <button className="flex items-center border border-custom-red px-4 py-2 rounded-md">
+          <button className="flex items-center px-4 py-2 border rounded-md border-custom-red">
             <MdOutlinePermPhoneMsg className="text-custom-red" style={{ fontSize: 28 }} />
             <p style={{ fontSize: 15 }}>Заказать звонок</p>
           </button>
-          <button className="flex items-center bg-custom-red text-white px-4 py-2 rounded-md">
+          <button className="flex items-center px-4 py-2 text-white rounded-md bg-custom-red">
             <CiViewList style={{ fontSize: 28 }} />
             <p style={{ fontSize: 15 }}>Запросить прайс-лист</p>
           </button>
         </div>
       </div>
       <hr className="mt-4 border-t-2 border-custom-brown" />
-    
+
     </nav>
   );
 };
