@@ -14,6 +14,7 @@ import Kontakti from "./pages/Kontakti";
 import OKampani from "./pages/OKampani";
 import Pagonaj from "./pages/Pagonaj";
 import Sotrudnichat from "./pages/Sotrudnichat";
+import MultipleSelectCheckmarks from "./components/MultipleSelectCheckmarks";
 // import Katalog from "./pages/Katalog";
 
 
@@ -28,6 +29,7 @@ const router = createBrowserRouter([
         <MainPage />
         <AllProducts />
         <Filter />
+        {/* <MultipleSelectCheckmarks /> */}
       </>
     ),
   },
