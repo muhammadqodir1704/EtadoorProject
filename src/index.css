@@ -1,7 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url(https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&display=swap);
+
+
 body {
     font-family: "Noto Sans Georgian", serif;
-
 }
