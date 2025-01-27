@@ -1,12 +1,107 @@
-import Contact from "./components/Contact";
 import "./App.css";
-import KatalogDverey from "./components/KatalogDverey";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import React from "react";
+import Navbar from "./components/Navbar";
+import Header from "./components/Header";
+import Filter from "./components/Filter";
+import MainPage from "./components/MainPage";
+import AllProducts from "./components/AllProducts";
+import Furnitura from "./pages/Furnitura";
+import GdeKupit from "./pages/GdeKupit";
+import Kontakti from "./pages/Kontakti";
+import OKampani from "./pages/OKampani";
+import Pagonaj from "./pages/Pagonaj";
+import Sotrudnichat from "./pages/Sotrudnichat";
+import Contact from "./components/Contact";
+// import Katalog from "./pages/Katalog";
 
-export default function App() {
-  return (
-    <h1 className="text-3xl font-bold">
-      {/* <Contact /> */}
-      <KatalogDverey />
-    </h1>
-  );
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: (
+      <>
+        <Navbar />
+        <Header />
+        <MainPage />
+        <AllProducts />
+        <Filter />
+      </>
+    ),
+  },
+  {
+    path: "/furnitura",
+    element: (
+      <>
+        <Navbar />
+        <Header />
+        <Furnitura />
+      </>
+    ),
+  },
+  {
+    path: "/gde-kupit",
+    element: (
+      <>
+        <Navbar />
+        <Header />
+        <GdeKupit />
+      </>
+    ),
+  },
+  {
+    path: "/kontakti",
+    element: (
+      <>
+        <Navbar />
+        <Header />
+        <Contact />
+      </>
+    ),
+  },
+  {
+    path: "/o-kompanii",
+    element: (
+      <>
+        <Navbar />
+        <Header />
+        <OKampani />
+      </>
+    ),
+  },
+  {
+    path: "/pogonaj",
+    element: (
+      <>
+        <Navbar />
+        <Header />
+        <Pagonaj />
+      </>
+    ),
+  },
+  {
+    path: "/sotrudnichat",
+    element: (
+      <>
+        <Navbar />
+        <Header />
+        <Sotrudnichat />
+      </>
+    ),
+  },
+  {
+    path: "*",
+    element: (
+      <>
+        <Navbar />
+        <Header />
+        <div>404: Страница не найдена</div>
+      </>
+    ),
+  },
+]);
+
+function App() {
+  return <RouterProvider router={router} />;
 }
+
+export default App;
