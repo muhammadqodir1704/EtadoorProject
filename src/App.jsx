@@ -5,9 +5,11 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import Filter from "./components/Filter";
-import NashiDveri from "./components/NashiDveri";
+import Footer from "./components/Footer";
+import Xarita from "./components/Xarita";
+import KatalogDverey from "./components/KatalogDverey";
+import Input from "./components/Input";
 import Dverxiy from "./components/Dverxiy";
-import Zaprosit from "./components/Zaprosit";
 
 // pages
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -19,8 +21,7 @@ import Kontakti from "./pages/Kontakti";
 import OKampani from "./pages/OKampani";
 import Pagonaj from "./pages/Pagonaj";
 import Sotrudnichat from "./pages/Sotrudnichat";
-
-
+// import Dverxiy from "./components/Dverxiy";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -31,8 +32,20 @@ const router = createBrowserRouter([
         <MainPage />
         <AllProducts />
         <Filter />
-        <NashiDveri />
+        <Input />
         <Dverxiy />
+        <Xarita />
+        <Footer />
+      </>
+    ),
+  },
+  {
+    path: "/Katalog",
+    element: (
+      <>
+        <Navbar />
+        <Header />
+        <KatalogDverey />
       </>
     ),
   },

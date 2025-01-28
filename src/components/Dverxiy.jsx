@@ -8,8 +8,6 @@ const Dverxiy = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
-        // Formni backendga jo'natish uchun ma'lumotlar tayyorlanadi
         const formData = {
             name,
             phone,
@@ -18,7 +16,6 @@ const Dverxiy = () => {
         console.log('Form jo‘natildi:', formData);
         alert('Zayavka muvaffaqiyatli yuborildi!');
 
-        // Ma'lumotlarni tozalash
         setName('');
         setPhone('');
     };

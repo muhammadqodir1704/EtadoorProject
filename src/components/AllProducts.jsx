@@ -18,15 +18,15 @@ const AllProducts = () => {
                     Accept: 'application/json',
                 },
             });
-            const data = await response.json();
-            console.log(data); // Bu yerda javobni tekshiring
-            setProducts(data.data.content); // API formatiga mos bo'lsa
+            const result = await response.json();
+            setProducts(result.data || []); // data massivini to'g'ridan-to'g'ri olamiz
             setLoading(false);
         } catch (error) {
             console.error('API xatolik:', error);
             setLoading(false);
         }
     };
+    
     
 
     const ProductCard = ({ product }) => (
