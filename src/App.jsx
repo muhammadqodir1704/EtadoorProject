@@ -1,10 +1,15 @@
 import "./App.css";
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// components
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import Filter from "./components/Filter";
+import NashiDveri from "./components/NashiDveri";
+import Dverxiy from "./components/Dverxiy";
+import Zaprosit from "./components/Zaprosit";
 
+// pages
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import MainPage from "./components/MainPage";
 import AllProducts from "./components/AllProducts";
@@ -14,8 +19,6 @@ import Kontakti from "./pages/Kontakti";
 import OKampani from "./pages/OKampani";
 import Pagonaj from "./pages/Pagonaj";
 import Sotrudnichat from "./pages/Sotrudnichat";
-// import Katalog from "./pages/Katalog";
-
 
 
 const router = createBrowserRouter([
@@ -28,7 +31,8 @@ const router = createBrowserRouter([
         <MainPage />
         <AllProducts />
         <Filter />
-        {/* <MultipleSelectCheckmarks /> */}
+        <NashiDveri />
+        <Dverxiy />
       </>
     ),
   },

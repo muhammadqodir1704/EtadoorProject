@@ -17,8 +17,9 @@ import myImage from "../Images/angular.png";
 
 const Kontakti = () => {
   return (
+    <div className="container mx-auto">
     <div
-      className="p-7 container mx-auto"
+      className="p-7"
       style={{
         fontFamily: "'Circe', sans-serif",
       }}>
@@ -331,6 +332,7 @@ const Kontakti = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };
