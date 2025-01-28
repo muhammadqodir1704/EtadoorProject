@@ -72,7 +72,7 @@ const Dverxiy = () => {
                         </span>
                         <button
                             type="submit"
-                            className="px-6 py-3 text-sm text-white rounded-lg bg-custom-red sm:text-base hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-400"
+                            className="px-6 py-3 text-sm text-white bg-red-500 rounded-lg sm:text-base hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-400"
                         >
                             Отправить заявку
                         </button>
