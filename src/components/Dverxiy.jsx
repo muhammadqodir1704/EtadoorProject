@@ -64,7 +64,7 @@ const Dverxiy = () => {
                             type="number"
                             placeholder="Телефон"
                         />
-                        <span className="block max-w-md mb-4 text-xs leading-tight text-gray-500 sm:text-sm">
+                        <span className="block max-w-md mb-4 text-xs leading-tight text-gray-600 sm:text-sm">
                             Нажимая на кнопку, вы даете согласие с Политикой конфиденциальности
                         </span>
                         <button
