@@ -10,22 +10,32 @@ const AllProducts = () => {
         fetchProducts();
     }, []);
 
-    const fetchProducts = async () => {
-        try {
-            const response = await fetch('https://etadoor.koyeb.app/api/doors?page=0&size=20', {
-                method: 'GET',
-                headers: {
-                    Accept: 'application/json',
-                },
-            });
-            const result = await response.json();
-            setProducts(result.data || []); // data massivini to'g'ridan-to'g'ri olamiz
-            setLoading(false);
-        } catch (error) {
-            console.error('API xatolik:', error);
-            setLoading(false);
+   const fetchProducts = async () => {
+    try {
+        const response = await fetch('https://etadoor.up.railway.app/api/doors?page=0&size=20', {
+            method: 'GET',
+            headers: {
+                Accept: 'application/json',
+            },
+        });
+
+        console.log("Response status:", response.status);
+
+        if (!response.ok) {
+            throw new Error(`Server xatosi: ${response.status}`);
         }
-    };
+
+        const result = await response.json();
+        console.log("API dan kelgan ma'lumot:", result);
+
+        setProducts(result.data || []);
+        setLoading(false);
+    } catch (error) {
+        console.error('API xatolik:', error);
+        setLoading(false);
+    }
+};
+
     
     
 

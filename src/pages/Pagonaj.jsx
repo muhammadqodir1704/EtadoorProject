@@ -2,7 +2,9 @@ import React from 'react'
 
 const Pagonaj = () => {
   return (
-    <div>Pagonaj</div>
+    <div>
+       <h1>Pagonaj</h1>
+    </div>
   )
 }
 
