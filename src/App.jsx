@@ -8,8 +8,8 @@ import Filter from "./components/Filter";
 import Footer from "./components/Footer";
 import Xarita from "./components/Xarita";
 import KatalogDverey from "./components/KatalogDverey";
-import Input from "./components/Input";
 import Dverxiy from "./components/Dverxiy";
+import Rasm from "./components/Rasm";
 
 // pages
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -21,6 +21,7 @@ import Kontakti from "./pages/Kontakti";
 import OKampani from "./pages/OKampani";
 import Pagonaj from "./pages/Pagonaj";
 import Sotrudnichat from "./pages/Sotrudnichat";
+import Input from "./components/Input";
 // import Dverxiy from "./components/Dverxiy";
 const router = createBrowserRouter([
   {
@@ -32,8 +33,9 @@ const router = createBrowserRouter([
         <MainPage />
         <AllProducts />
         <Filter />
+         <Rasm/>
         <Input />
-        <Dverxiy />
+        < Dverxiy />
         <Xarita />
         <Footer />
       </>
