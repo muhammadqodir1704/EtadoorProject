@@ -70,15 +70,15 @@ const Footer = () => {
           <li>Сотрудничество</li>
         </ul>
         <div className="w-70">
-          <button className="flex items-center mb-4 p-2 bg-gray-200 w-full text-sm">
+          <button className="flex items-center mb-4 px-24 py-4 bg-gray-200 w-full text-sm border border-black">
             <FiPhoneCall className="mr-2 text-red-600" />
             Заказать звонок
           </button>
-          <button className="flex items-center mb-4 p-2 bg-gray-200 w-full text-sm">
+          <button className="flex items-center mb-4  px-24 py-4 bg-gray-200 w-full text-sm border border-black">
             <FaFileUpload className="mr-2 text-red-600" />
             Запросить прайс-лист
           </button>
-          <button className="p-2 bg-gray-200 w-full text-sm">
+          <button className="p-2 bg-gray-200 w-full px-24 py-4 text-sm border border-black">
             Стать партнером
           </button>
         </div>

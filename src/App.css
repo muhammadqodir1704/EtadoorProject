@@ -1,13 +1,43 @@
-.scroll-container::-webkit-scrollbar {
-  width: 8px; /* Scrollbar kengligi */
+/* Scrollbar konteyneri */
+.scroll-container {
+  max-height: 24rem; /* 384px */
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: red transparent;
 }
 
-.scroll-container::-webkit-scrollbar-thumb {
-  background-color: gray;
-  border-radius: 4px;
+/* Chrome, Edge, va Safari uchun */
+.scroll-container::-webkit-scrollbar {
+  width: 6px;
 }
 
 .scroll-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
   background-color: red;
-  border-radius: 4px;
+  border-radius: 10px;
+}
+
+/* Hover bo'lganda */
+.scroll-container::-webkit-scrollbar-thumb:hover {
+  background-color: darkred;
+}
+
+/* LI elementlarining default holati */
+.scroll-container li {
+  width: 400px; /* List elementlarining ko'p rangi */
+  padding: 5px;
+  border: 2px solid transparent; /* Boshlang'ich holatda border ko'rinmaydi */
+  border-radius: 5px;
+  transition: border 0.3s ease-in-out;
+}
+
+/* LI tanlanganda (fokus bo'lsa) qizil border chiqadi */
+.scroll-container li:focus,
+.scroll-container li:hover {
+  width: 400px;
+  border: 2px solid red;
+  outline: none; /* Default fokus chizig'ini o'chirish */
 }
