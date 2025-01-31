@@ -1,4 +1,3 @@
-import "./App.css";
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // components
@@ -24,6 +23,7 @@ import Pagonaj from "./pages/Pagonaj";
 import Sotrudnichat from "./pages/Sotrudnichat";
 import Input from "./components/Input";
 // import Dverxiy from "./components/Dverxiy";
+import "./App.css";
 const router = createBrowserRouter([
   {
     path: "/",
