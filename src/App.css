@@ -3,11 +3,11 @@
 }
 
 .scroll-container::-webkit-scrollbar-thumb {
-  background-color: gray;
+  background-color: #FF6F55;
   border-radius: 4px;
 }
 
 .scroll-container::-webkit-scrollbar-track {
-  background-color: red;
+  background-color: #f1f1f1;
   border-radius: 4px;
 }

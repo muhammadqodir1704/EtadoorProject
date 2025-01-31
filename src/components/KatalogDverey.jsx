@@ -20,7 +20,7 @@ const KatalogDverey = () => {
                 },
             });
             const result = await response.json();
-            setProducts(result.data || []); // data massivini to'g'ridan-to'g'ri olamiz
+            setDoors(result.data || []); // data massivini to'g'ridan-to'g'ri olamiz
             setLoading(false);
         } catch (error) {
             console.error('API xatolik:', error);
@@ -32,7 +32,7 @@ const KatalogDverey = () => {
   }, []);
 
   return (
-    <div>
+    <div className=" mx-auto mt-10">
       <h1 className=" ms-6 mb-4">Каталог дверей</h1>
       <div className="grid grid-cols-4 gap-5 justify-items-center">
         {loading && <p>Loading doors...</p>}
@@ -64,14 +64,8 @@ const KatalogDverey = () => {
         ))}
       </div>
       <h2 className="mt-10 text-center">Наши двери применяют</h2>
-
-      <Rasm />
-      {/* <Dverxiy /> */}
-      <Input />
-      <Xarita />
-      <hr className="border-2 border-amber-700 mt-8" />
-      <Footer />
     </div>
+    
   );
 };
 

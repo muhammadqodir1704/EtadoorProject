@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Pagonaj = () => {
   const columns = [
@@ -151,33 +152,71 @@ const Pagonaj = () => {
       ],
       "sellerId": 3,
       "validSizeFormat": true
-    }
+    },
+    {
+      "id": 9,
+      "title": "Pine Panel Moulding Moulding",
+      "size": "100x25",
+      "article": "M-75304",
+      "price": 47.66,
+      "quantity": 168,
+      "description": "Exquisite Panel Moulding Pine crafted from premium Pine material. Excellent paint adhesion. Perfect for traditional and modern spaces. Resistant to warping.",
+      "imagesUrl": [
+        "https://images.unsplash.com/photo-1513694203232-719a280e022f",
+        "https://images.unsplash.com/photo-1600585152220-90363fe7e115"
+      ],
+      "sellerId": 3,
+      "validSizeFormat": true
+    },
+    {
+      "id": 10,
+      "title": "Plastic Egg and Dart Moulding",
+      "size": "90x30",
+      "article": "M-89788",
+      "price": 137.44,
+      "quantity": 467,
+      "description": "Exquisite Egg and Dart Plastic crafted from premium Plastic material. Perfect for traditional and modern spaces. Durable and long-lasting. Adds elegance to any room.",
+      "imagesUrl": [
+        "https://images.unsplash.com/photo-1600585154526-990dced4db0d",
+        "https://images.unsplash.com/photo-1600585154526-990dced4db0d"
+      ],
+      "sellerId": 3,
+      "validSizeFormat": true
+    },
   ];
 
   return (
-    <div className="container grid grid-cols-1 gap-6 p-6 mx-auto cursor-pointer sm:grid-cols-3 md:grid-cols-4">
-      {columns.map((item, index) => (
-        <div
-          key={index}
-          className="p-4 transition duration-300 bg-white border rounded-lg shadow-md hover:shadow-xl hover:scale-105"
-        >
-          <img
-            src={item.imagesUrl[0]}
-            alt={item.title}
-            className="object-cover w-full h-48 rounded-md"
-          />
-          <div className="mt-4">
-            <h3 className="text-lg font-semibold">{item.title}</h3>
-            <p className="text-sm text-gray-500">{item.size} | {item.article}</p>
-            <p className="mt-2 text-lg font-bold text-gray-800">${item.price}</p>
-            <p className="text-sm text-gray-600">Stock: {item.quantity}</p>
-            <p className="mt-2 text-xs text-gray-500">{item.description}</p>
+    <div className="container mx-auto ">
+      <div className="flex items-center px-10 mb-6">
+        <Link to="/" className="text-black hover:underline">
+          Главная |
+        </Link>
+        <span className="text-base text-stone-400"> Погонаж</span>
+      </div>
+      <h1 className="px-10 mb-6 text-2xl font-normal md:text-4xl">Погонаж</h1>
+      <div className="grid grid-cols-1 gap-6 px-10 mb-6 cursor-pointer sm:grid-cols-3 md:grid-cols-4">
+        {columns.map((item, index) => (
+          <div
+            key={index}
+            className="p-4 transition duration-300 ease-out bg-white border rounded-lg shadow-md hover:shadow-xl hover:scale-105"
+          >
+            <img
+              src={item.imagesUrl[0]}
+              alt={item.title}
+              className="object-cover w-full h-48 rounded-md"
+            />
+            <div className="mt-4">
+              <h3 className="text-lg font-semibold">{item.title}</h3>
+              <p className="text-sm text-gray-500">{item.size} | {item.article}</p>
+              <p className="mt-2 text-lg font-bold text-gray-800">${item.price}</p>
+              <p className="text-sm text-gray-600">Stock: {item.quantity}</p>
+              <p className="mt-2 text-xs text-gray-500">{item.description}</p>
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };
 
 export default Pagonaj;
-
