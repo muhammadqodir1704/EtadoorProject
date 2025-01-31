@@ -22,18 +22,6 @@ const Dverxiy = () => {
 
     return (
         <div className="flex flex-col min-h-screen">
-            {/* Background qismi */}
-            <div
-                className="flex items-center justify-center w-full h-screen"
-                style={{
-                    backgroundImage: `url(${dverxi})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    backgroundRepeat: 'no-repeat',
-                }}
-            >
-            </div>
-            {/* Email qismi */}
             <div
                 className="flex items-center justify-center h-screen"
                 style={{
@@ -43,7 +31,6 @@ const Dverxiy = () => {
                     backgroundRepeat: 'no-repeat',
                 }}
             >
-                {/* Kontent */}
                 <div className="relative flex flex-col items-start justify-start p-6 right-52 text-start sm:p-8 lg:p-12">
                     <h2 className="text-3xl font-bold leading-snug sm:text-4xl lg:text-6xl text-custom-red">
                         Стань дилером <br />

@@ -10,6 +10,7 @@ import Xarita from "./components/Xarita";
 import KatalogDverey from "./components/KatalogDverey";
 import Dverxiy from "./components/Dverxiy";
 import Rasm from "./components/Rasm";
+import EtadoorImg from "./components/EtadoorImg";
 
 // pages
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -33,9 +34,10 @@ const router = createBrowserRouter([
         <MainPage />
         <AllProducts />
         <Filter />
-         <Rasm/>
+        <Rasm />
         <Input />
-        < Dverxiy />
+        <EtadoorImg />
+        <Dverxiy />
         <Xarita />
         <Footer />
       </>

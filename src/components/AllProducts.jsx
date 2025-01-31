@@ -5,7 +5,7 @@ import React, { useEffect, useState } from 'react';
 const AllProducts = () => {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
-
+  
     useEffect(() => {
         fetchProducts();
     }, []);
