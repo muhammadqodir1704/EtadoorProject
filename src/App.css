@@ -1,9 +1,15 @@
-/* Scrollbar konteyneri */
 .scroll-container {
   max-height: 24rem; /* 384px */
   overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: red transparent;
+}
+
+/* Faqat <li> elementlarini skroll ichida tutish */
+.scroll-container ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 /* Chrome, Edge, va Safari uchun */
@@ -12,32 +18,29 @@
 }
 
 .scroll-container::-webkit-scrollbar-track {
-  background: transparent;
+  background: #f1f1f1;
+  border-radius: 4px;
 }
 
 .scroll-container::-webkit-scrollbar-thumb {
-  background-color: red;
-  border-radius: 10px;
+  background-color: #ff6f55;
+  border-radius: 4px;
 }
 
-/* Hover bo'lganda */
 .scroll-container::-webkit-scrollbar-thumb:hover {
   background-color: darkred;
 }
 
 /* LI elementlarining default holati */
 .scroll-container li {
-  width: 400px; /* List elementlarining ko'p rangi */
+  width: 400px;
   padding: 5px;
-  border: 2px solid transparent; /* Boshlang'ich holatda border ko'rinmaydi */
+  border: 2px solid transparent;
   border-radius: 5px;
   transition: border 0.3s ease-in-out;
 }
 
-/* LI tanlanganda (fokus bo'lsa) qizil border chiqadi */
-.scroll-container li:focus,
+/* LI tanlanganda qizil border chiqadi */
 .scroll-container li:hover {
-  width: 400px;
   border: 2px solid red;
-  outline: none; /* Default fokus chizig'ini o'chirish */
 }
