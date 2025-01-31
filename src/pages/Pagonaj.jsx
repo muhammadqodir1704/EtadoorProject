@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Footer from "../components/Footer";
 
 const Pagonaj = () => {
   const columns = [
@@ -215,6 +216,7 @@ const Pagonaj = () => {
           </div>
         ))}
       </div>
+      <Footer />
     </div>
   );
 };
