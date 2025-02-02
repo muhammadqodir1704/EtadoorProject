@@ -216,7 +216,7 @@ const Pagonaj = () => {
           </div>
         ))}
       </div>
-      <Footer />
+      {/* <Footer /> */}
       {/* components */}
     </div>
   );

@@ -143,8 +143,6 @@ const Kontakti = () => {
         </div>
 
         <Xarita />
-
-        <Footer />
       </div>
     </div>
   );
