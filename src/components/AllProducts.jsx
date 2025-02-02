@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-
+import { NavLink } from 'react-router-dom';
 // select ui 
 
 const AllProducts = () => {
@@ -40,6 +40,7 @@ const AllProducts = () => {
     
 
     const ProductCard = ({ product }) => (
+        <NavLink to={`/detailProducts/${product.id}`}>
         <div className="w-[330px] h-[483px] bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col">
             <div className="relative h-[240px]">
                 {product.images.length > 0 ? (
@@ -80,6 +81,7 @@ const AllProducts = () => {
                 </button>
             </div>
         </div>
+        </NavLink>
     );
 
     return (
