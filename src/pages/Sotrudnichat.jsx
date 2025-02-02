@@ -67,4 +67,5 @@ const Sotrudnichat = () => {
 };
 
 export default Sotrudnichat
+//*asReactComponent={() => <Dverxiy />}
 
