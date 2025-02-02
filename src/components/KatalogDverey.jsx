@@ -4,7 +4,6 @@ import Rasm from "./Rasm";
 import Xarita from "./Xarita";
 import Footer from "./Footer";
 import Input from "./Input";
-import Dverxiy from "./Dverxiy";
 import EtadoorImg from "./EtadoorImg";
 
 const KatalogDverey = () => {
@@ -66,6 +65,9 @@ const KatalogDverey = () => {
       </div>
       <EtadoorImg />
       <Rasm />
+      <Input />
+      <Xarita />
+      <Footer />
     </div>
 
 
