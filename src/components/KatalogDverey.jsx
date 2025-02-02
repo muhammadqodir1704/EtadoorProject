@@ -5,27 +5,28 @@ import Xarita from "./Xarita";
 import Footer from "./Footer";
 import Input from "./Input";
 import Dverxiy from "./Dverxiy";
+import EtadoorImg from "./EtadoorImg";
 
 const KatalogDverey = () => {
   const [doors, setDoors] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
- const fetchDoors = async () => {
-        try {
-            const response = await fetch('https://etadoor.koyeb.app/api/doors?page=0&size=20', {
-                method: 'GET',
-                headers: {
-                    Accept: 'application/json',
-                },
-            });
-            const result = await response.json();
-            setDoors(result.data || []); // data massivini to'g'ridan-to'g'ri olamiz
-            setLoading(false);
-        } catch (error) {
-            console.error('API xatolik:', error);
-            setLoading(false);
-        }
+    const fetchDoors = async () => {
+      try {
+        const response = await fetch('https://etadoor.koyeb.app/api/doors?page=0&size=20', {
+          method: 'GET',
+          headers: {
+            Accept: 'application/json',
+          },
+        });
+        const result = await response.json();
+        setDoors(result.data || []); // data massivini to'g'ridan-to'g'ri olamiz
+        setLoading(false);
+      } catch (error) {
+        console.error('API xatolik:', error);
+        setLoading(false);
+      }
     };
 
     fetchDoors();
@@ -63,10 +64,13 @@ const KatalogDverey = () => {
           </div>
         ))}
       </div>
-      <h2 className="mt-10 text-center">Наши двери применяют</h2>
+      <EtadoorImg />
+      <Rasm />
     </div>
-    
+
+
   );
+
 };
 
 export default KatalogDverey;
