@@ -88,7 +88,7 @@ const Filter = () => {
       <div className="container mx-auto p-6 min-h-screen rounded-lg">
         <h2
           style={{ fontSize: 34, fontWeight: 700 }}
-          className=" text-center mb-8"
+          className=" text-center mb-8 font-noto-sans-georgian"
         >
           Подберите свою дверь
         </h2>

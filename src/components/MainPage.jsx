@@ -12,7 +12,7 @@ const MainPage = () => {
       <Link to={"/"}>Главная</Link> {" "}
       <div className="flex justify-between items-center">
         <div className="flex-1">
-          <h1 style={{ fontSize: 48 }} className="text-4xl font-bold">
+          <h1 style={{ fontSize: 48 , fontWeight:700}} className="text-4xl font-bold font-noto-sans-georgian">
             Влагостойкие композитные <br /> двери Etadoor
           </h1>
           <div className="flex justify-between mt-4">

@@ -87,7 +87,7 @@ const AllProducts = () => {
     return (
         <div className=" min-h-screen">
             <div className="container mx-auto px-4 py-12">
-                <h1 className="text-4xl font-bold text-gray-900 text-center mb-12">
+                <h1 style={{fontSize: 34 , fontWeight: 700}} className="font-noto-sans-georgian  font-bold text-gray-900 text-center mb-12">
                     Наши двери
                 </h1>
                 {loading ? (

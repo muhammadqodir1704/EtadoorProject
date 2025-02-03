@@ -15,7 +15,7 @@ const Navbar = () => {
               src={Logo}
               alt="Logo"
             />
-            <p style={{ fontWeight: 700, fontSize: 24 }} className="ml-4">
+            <p style={{ fontWeight: 700, fontSize: 24 ,}} className="ml-4 font-noto-sans-georgian">
               Влагостойкие двери <br /> от производителя
             </p>
           </a>
@@ -25,11 +25,12 @@ const Navbar = () => {
             <p
               style={{
                 fontFamily: "Noto Sans Georgian",
-                fontWeight: 400,
+                fontWeight: 700,
                 fontSize: 32,
+                color: "#142839"
               }}
             >
-              <span className="text-custom-brown">+7 499</span> 375 77 65
+              <span style={{fontSize: 34 , fontWeight: 400}} className="text-custom-brown">+7 499</span> 375 77 65
             </p>
           </li>
           <div className="flex space-x-2">
@@ -44,11 +45,11 @@ const Navbar = () => {
         <div className="flex space-x-4">
           <button className="flex items-center px-4 py-2 border rounded-md border-custom-red">
             <MdOutlinePermPhoneMsg className="text-custom-red" style={{ fontSize: 28 }} />
-            <p style={{ fontSize: 15 }}>Заказать звонок</p>
+            <p className="font-circe" style={{ fontSize: 14 ,fontWeight: 700, color: "#142839"}}>Заказать звонок</p>
           </button>
           <button className="flex items-center px-4 py-2 text-white rounded-md bg-custom-red">
             <CiViewList style={{ fontSize: 28 }} />
-            <p style={{ fontSize: 15 }}>Запросить прайс-лист</p>
+            <p className="font-circe" style={{ fontSize: 14 , fontWeight: 700 , }}>Запросить прайс-лист</p>
           </button>
         </div>
       </div>

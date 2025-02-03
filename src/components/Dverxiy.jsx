@@ -32,7 +32,7 @@ const Dverxiy = () => {
                 }}
             >
                 <div className="relative flex flex-col items-start justify-start p-6 right-52 text-start sm:p-8 lg:p-12">
-                    <h2 className="text-3xl font-bold leading-snug sm:text-4xl lg:text-6xl text-custom-red">
+                    <h2 className="text-3xl font-bold leading-snug sm:text-4xl lg:text-6xl text-custom-red font-noto-sans-georgian">
                         Стань дилером <br />
                         на выгодных условиях
                     </h2>
