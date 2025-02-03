@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import { Link } from "react-router-dom";
 const Furnitura = () => {
   const [furnitura, setFurnitura] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -23,9 +23,12 @@ const Furnitura = () => {
   }, []);
 
   return (
-    <div className="container mx-auto mt-10 px-6">
+    <div className="container mx-auto p-6 min-h-screen rounded-lg">
+        <Link to={"/"}>Главная</Link> /{" "}
+        <Link to={"/furnitura"} className="text-stone-500">
+        Фурнитура
+        </Link>
       <h1 className="text-2xl font-bold mb-4">Фурнитура</h1>
-
       {loading ? (
         <p className="text-gray-600">Yuklanmoqda...</p>
       ) : (
