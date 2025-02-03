@@ -14,10 +14,10 @@ import KatalogDverey from './components/KatalogDverey';
 import Furnitura from './pages/Furnitura';
 import GdeKupit from './pages/GdeKupit';
 import Kontakti from './pages/Kontakti';
-import OKampani from './pages/OKampani';
 import Pagonaj from './pages/Pagonaj';
 import Sotrudnichat from './pages/Sotrudnichat';
 import DetailPage from './components/DetailPage';
+import Okampani from './pages/Okampani';
 import "./App.css"
 
 const router = createBrowserRouter([
@@ -58,7 +58,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'o-kompanii',
-        element: <OKampani />,
+        element: <Okampani />,
       },
       {
         path: 'pogonaj',

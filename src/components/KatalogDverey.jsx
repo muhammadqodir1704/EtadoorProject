@@ -5,6 +5,7 @@ import Xarita from "./Xarita";
 import Footer from "./Footer";
 import Input from "./Input";
 import EtadoorImg from "./EtadoorImg";
+import { Link } from "react-router-dom";
 
 const KatalogDverey = () => {
   const [doors, setDoors] = useState([]);
@@ -20,7 +21,7 @@ const KatalogDverey = () => {
           },
         });
         const result = await response.json();
-        setDoors(result.data || []); // data massivini to'g'ridan-to'g'ri olamiz
+        setDoors(result.data || []); 
         setLoading(false);
       } catch (error) {
         console.error('API xatolik:', error);
@@ -32,9 +33,15 @@ const KatalogDverey = () => {
   }, []);
 
   return (
-    <div className=" mx-auto mt-10">
-      <h1 className=" ms-6 mb-4">Каталог дверей</h1>
-      <div className="grid grid-cols-4 gap-5 justify-items-center">
+    <div className="container mx-auto p-6 min-h-screen rounded-lg">
+      <div>
+        <Link to={"/"}>Главная</Link> /{" "}
+        <Link to={"/Katalog"} className="text-stone-500">
+          Каталог дверей
+        </Link>
+      </div>
+      <h1 style={{ fontSize: 34, fontWeight: 700 }} className=" ms-6 mb-4">Каталог дверей</h1>
+      <div className=" grid grid-cols-4 gap-5 justify-items-center">
         {loading && <p>Loading doors...</p>}
         {doors.map((item) => (
           <div
@@ -67,7 +74,6 @@ const KatalogDverey = () => {
       <Rasm />
       <Input />
       <Xarita />
-      <Footer />
     </div>
 
 
