@@ -143,8 +143,6 @@ const Kontakti = () => {
               className="rounded-lg shadow-md"></iframe>
           </div>
         </div>
-
-        <Xarita />
       </div>
     </div>
   );

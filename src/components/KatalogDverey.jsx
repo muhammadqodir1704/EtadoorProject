@@ -73,7 +73,6 @@ const KatalogDverey = () => {
       <EtadoorImg />
       <Rasm />
       <Input />
-      <Xarita />
     </div>
 
 
@@ -82,4 +81,3 @@ const KatalogDverey = () => {
 };
 
 export default KatalogDverey;
-// Sardor
