@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useParams } from "react-router-dom";
-
+import EtadoorImg from "./EtadoorImg";
 // swiper color n
 import { Virtual, Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -11,18 +11,14 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 import '../styles.css';
+import { div } from "framer-motion/m";
 
 const DetailPage = () => {
     const { id } = useParams();
     const [product, setProduct] = useState(null);
     const [loading, setLoading] = useState(true);
-    const [swiperRef, setSwiperRef] = useState(null);
-    const appendNumber = useRef(500);
-    const prependNumber = useRef(1);
     const [direction, setDirection] = useState(getDirection());
-    const [slides, setSlides] = useState(
-        Array.from({ length: 500 }).map((_, index) => `Slide ${index + 1}`)
-    );
+
     useEffect(() => {
         const handleResize = () => setDirection(getDirection());
         window.addEventListener("resize", handleResize);
@@ -32,26 +28,6 @@ const DetailPage = () => {
     function getDirection() {
         return window.innerWidth <= 760 ? "vertical" : "horizontal";
     }
-
-
-    // const prepend = () => {
-    //     setSlides([
-    //         `Slide ${prependNumber.current - 2}`,
-    //         `Slide ${prependNumber.current - 1}`,
-    //         ...slides,
-    //     ]);
-    //     prependNumber.current = prependNumber.current - 2;
-    //     swiperRef.slideTo(swiperRef.activeIndex + 2, 0);
-    // };
-
-    // const append = () => {
-    //     setSlides([...slides, 'Slide ' + ++appendNumber.current]);
-    // };
-
-    // const slideTo = (index) => {
-    //     swiperRef.slideTo(index - 1, 0);
-    // };
-
     useEffect(() => {
         const fetchProductDetail = async () => {
             try {
@@ -98,6 +74,7 @@ const DetailPage = () => {
     }
 
     return (
+        <div>
         <div className="container mx-auto px-4 py-12">
             <h1 className="font-noto-sans-georgian text-3xl font-bold text-gray-900 mb-6">{product.name}</h1>
             <div className="flex gap-10">
@@ -219,6 +196,8 @@ const DetailPage = () => {
                     </div>
                 </div>
             </div>
+        </div>
+        <EtadoorImg/>
         </div>
     );
 };
