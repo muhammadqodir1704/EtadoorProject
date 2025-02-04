@@ -9,6 +9,7 @@ export default {
       colors: {
         'custom-brown': '#A08961',
         'custom-red': '#FF6F55',
+        'custom-black': '#142839',
       },
       fontFamily: {
         'noto-sans-georgian': ['Noto Sans Georgian', 'serif'],

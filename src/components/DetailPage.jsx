@@ -1,70 +1,214 @@
-import React from 'react'
+import React, { useEffect, useState, useRef } from "react";
 import { useParams } from "react-router-dom";
+
+// swiper color n
+import { Virtual, Navigation, Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
+import '../styles.css';
+
 const DetailPage = () => {
-  const { id } = useParams();
-  const product = products.find((p) => p.id === Number(id));
+    const { id } = useParams();
+    const [product, setProduct] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [swiperRef, setSwiperRef] = useState(null);
+    const appendNumber = useRef(500);
+    const prependNumber = useRef(1);
+    const [direction, setDirection] = useState(getDirection());
+    const [slides, setSlides] = useState(
+        Array.from({ length: 500 }).map((_, index) => `Slide ${index + 1}`)
+    );
+    useEffect(() => {
+        const handleResize = () => setDirection(getDirection());
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
 
-  if (!product) {
-      return <h2 className="text-center text-xl text-red-600">Mahsulot topilmadi</h2>;
-  }
-  return (
-    <div className=" max-w-6xl mx-auto p-6">
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {/* Mahsulot Rasmi */}
-        <div className="relative">
-            <img src={product.images[0]} alt={product.name} className="w-full rounded-lg shadow-md" />
-            <div className="absolute top-4 left-4 flex gap-2">
-                {product.isNew && <span className="bg-red-600 text-white px-3 py-1 rounded-full">New</span>}
-                {product.isDiscounted && <span className="bg-yellow-500 text-white px-3 py-1 rounded-full">Chegirma</span>}
+    function getDirection() {
+        return window.innerWidth <= 760 ? "vertical" : "horizontal";
+    }
+
+
+    // const prepend = () => {
+    //     setSlides([
+    //         `Slide ${prependNumber.current - 2}`,
+    //         `Slide ${prependNumber.current - 1}`,
+    //         ...slides,
+    //     ]);
+    //     prependNumber.current = prependNumber.current - 2;
+    //     swiperRef.slideTo(swiperRef.activeIndex + 2, 0);
+    // };
+
+    // const append = () => {
+    //     setSlides([...slides, 'Slide ' + ++appendNumber.current]);
+    // };
+
+    // const slideTo = (index) => {
+    //     swiperRef.slideTo(index - 1, 0);
+    // };
+
+    useEffect(() => {
+        const fetchProductDetail = async () => {
+            try {
+                const response = await fetch(`https://etadoor.up.railway.app/api/doors/${id}`);
+                if (!response.ok) {
+                    throw new Error(`Server xatosi: ${response.status}`);
+                }
+                const result = await response.json();
+
+                console.log("API dan kelgan ma'lumot:", result);
+
+                // `data` obyekt ekanligini tekshiramiz
+                if (result.success && typeof result.data === "object" && result.data !== null) {
+                    setProduct(result.data);
+                } else {
+                    console.error("Mahsulot topilmadi yoki data obyekt emas!");
+                    setProduct(null);
+                }
+
+                setLoading(false);
+            } catch (error) {
+                console.error("API xatolik:", error);
+                setLoading(false);
+            }
+        };
+
+        fetchProductDetail();
+    }, [id]);
+
+    if (loading) {
+        return (
+            <div className="flex justify-center items-center min-h-screen">
+                <div className="animate-spin rounded-full h-12 w-12 border-4 border-[#a78b5a] border-t-transparent"></div>
             </div>
-        </div>
+        );
+    }
 
-        {/* Mahsulot Ma'lumotlari */}
-        <div>
-            <h1 className="text-3xl font-semibold text-gray-800">{product.name}</h1>
-            <p className="text-lg text-gray-600 mt-2">{product.description}</p>
-
-            {/* Narx */}
-            <div className="mt-4">
-                <span className="text-2xl font-bold text-[#a78b5a]">{product.finalPrice} р.</span>
-                {product.isDiscounted && (
-                    <span className="text-gray-500 line-through ml-4">{product.originalPrice} р.</span>
-                )}
+    if (!product) {
+        return (
+            <div className="flex justify-center items-center min-h-screen">
+                <p className="text-red-500 text-lg">Mahsulot topilmadi.</p>
             </div>
+        );
+    }
 
-            {/* Variantlar */}
-            <div className="mt-4">
-                <h3 className="font-medium text-gray-700">O'lcham:</h3>
-                <div className="flex gap-3 mt-2">
-                    {product.sizes.map((size) => (
-                        <button key={size} className="px-4 py-2 border rounded-md hover:bg-gray-200">{size}</button>
-                    ))}
+    return (
+        <div className="container mx-auto px-4 py-12">
+            <h1 className="text-3xl font-bold text-gray-900 mb-6">{product.name}</h1>
+            <div className="flex gap-10">
+                <div className="w-1/2">
+                    <img
+                        src={product.images?.[0] || "/placeholder.jpg"}
+                        alt={product.name}
+                        className="w-full h-[450px] object-cover rounded-lg shadow-md"
+                    />
+                    <div className="flex mt-4 gap-2">
+                        {product.images?.map((img, index) => (
+                            <img
+                                key={index}
+                                src={img}
+                                alt={`Variant ${index}`}
+                                className="w-16 h-16 object-cover rounded-md border hover:border-[#a78b5a]"
+                            />
+                        ))}
+                    </div>
+                </div>
+                <div style={{ width: 570, height: 872 }} className=" space-y-4">
+                    <p className="text-lg text-gray-700 flex items-center">
+                        <p className="font-circe" style={{ fontSize: 16, fontWeight: 400 }}>Производитель:</p>
+                        <hr style={{ color: '#00000040' }} className="flex-grow border-t-2 border-dashed mx-2" />
+                        {product.manufacturer || "Noma’lum"}
+                    </p>
+                    <p className="text-lg text-gray-700 flex items-center">
+                        <p style={{ fontSize: 16, fontWeight: 400 }} className="font-circe">Артикул:</p>
+                        <hr style={{ color: '#00000040' }} className="flex-grow border-t-2 border-dashed mx-2" />
+                        {product.article || "Noma’lum"}
+                    </p>
+                    <p className="text-lg text-gray-700 flex items-center">
+                        <p className="font-circe" style={{ fontSize: 16, fontWeight: 400 }}>цвет:</p>
+                        <hr style={{ color: '#00000040' }} className="flex-grow border-t-2 border-dashed mx-2" />
+                        {product.color || "Noma’lum"}
+                    </p>
+                    <p className="text-lg text-gray-700 flex items-center">
+                        <p className="font-circe" style={{ fontSize: 16, fontWeight: 400 }}>Странa :</p>
+                        <hr style={{ color: '#00000040' }} className="flex-grow border-t-2 border-dashed mx-2" />
+                        {product.color || "Noma’lum"}
+                    </p>
+                    <div className="grid grid-cols-3 gap-4">
+                        <label className="flex items-center gap-2">
+                            <input type="radio" />
+                            200x2000 мм
+                        </label>
+                        <label className="flex items-center gap-2">
+                            <input type="radio" />
+                            300x2000 мм
+                        </label>
+                        <label className="flex items-center gap-2">
+                            <input type="radio" />
+                            400x2000 мм
+                        </label>
+                        <label className="flex items-center gap-2">
+                            <input type="radio" />
+                            500x2000 мм
+                        </label>
+                        <label className="flex items-center gap-2">
+                            <input type="radio" />
+                            600x2000 мм
+                        </label>
+                        <label className="flex items-center gap-2">
+                            <input type="radio" />
+                            700x2000 мм
+                        </label>
+                        <label className="flex items-center gap-2">
+                            <input type="radio" />
+                            800x2000 мм
+                        </label>
+                        <label className="flex items-center gap-2">
+                            <input type="radio" />
+                            900x2000 мм
+                        </label>
+                        <label className="flex items-center gap-2">
+                            <input type="radio" />
+                            Нестандартный
+                        </label>
+                    </div>
+                    {/* swiper */}
+                    <Swiper
+                        slidesPerView={3}
+                        direction={direction}
+                        navigation={{ nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" }}
+                        modules={[Navigation]}
+                        className="mySwiper"
+                    >
+                        <SwiperSlide>Slide 1</SwiperSlide>
+                        <SwiperSlide>Slide 2</SwiperSlide>
+                        <SwiperSlide>Slide 3</SwiperSlide>
+                        <SwiperSlide>Slide 4</SwiperSlide>
+
+
+                        <div className="swiper-button-next">▶</div>
+                        <div className="swiper-button-prev">◀</div>
+                    </Swiper>
+                    <p className="text-2xl font-bold text-[#a78b5a]">
+                        {product.finalPrice} р.
+                    </p>
+                    <div className="flex items-center">
+                        <button style={{ width: 277, height: 52 }} className=" bg-custom-red text-white py-3 px-6 transition-colors duration-300 font-medium">
+                            Заказать
+                        </button>
+                        <button style={{ width: 277, height: 52 }} className="border border-custom-brown py-3 px-6 text-custom-black  transition-colors duration-300 font-medium ml-4">
+                            Запросить прайс-лист
+                        </button>
+                    </div>
                 </div>
             </div>
-
-            {/* Rang tanlash */}
-            <div className="mt-4">
-                <h3 className="font-medium text-gray-700">Rang:</h3>
-                <div className="flex gap-3 mt-2">
-                    {product.colors.map((color) => (
-                        <span key={color} className={`w-8 h-8 rounded-full border border-gray-300`} style={{ backgroundColor: color }}></span>
-                    ))}
-                </div>
-            </div>
-
-            {/* Buyurtma tugmalari */}
-            <div className="mt-6 flex gap-4">
-                <button className="bg-[#a78b5a] hover:bg-[#8f7048] text-white py-3 px-6 rounded-lg transition-all">
-                    Заказать
-                </button>
-                <button className="border border-gray-400 py-3 px-6 rounded-lg hover:bg-gray-100 transition-all">
-                    Запросить прайс-лист
-                </button>
-            </div>
         </div>
-    </div>
-</div>
-  )
-}
+    );
+};
 
-export default DetailPage
+export default DetailPage;

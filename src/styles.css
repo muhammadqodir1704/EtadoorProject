@@ -1,0 +1,130 @@
+/* #root {
+    height: 100%;
+  }
+  html,
+  body {
+    position: relative;
+    height: 100%;
+  }
+  
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .swiper {
+    width: 100%;
+    height: 300px;
+    margin: 20px auto;
+  }
+  .append-buttons {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .append-buttons button {
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid #007aff;
+    color: #007aff;
+    text-decoration: none;
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin: 0 10px;
+    font-size: 13px;
+  }
+  
+  .color-container {
+    text-align: left;
+    font-family: Arial, sans-serif;
+  }
+  
+  .title {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .color-swiper {
+    display: flex;
+    align-items: center;
+  }
+  
+  .color-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 2px solid transparent;
+  }
+  
+  .color-circle img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+  }
+  
+  .color-circle.active {
+    border-color: #e57373;
+  }
+  
+  .color-name {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  .next-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #8c7f6e;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .info-text {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #666;
+  }
+  
+  .palette-link {
+    color: #e57373;
+    text-decoration: none;
+    font-weight: bold;
+  }
+   */
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
