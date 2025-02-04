@@ -99,7 +99,7 @@ const DetailPage = () => {
 
     return (
         <div className="container mx-auto px-4 py-12">
-            <h1 className="text-3xl font-bold text-gray-900 mb-6">{product.name}</h1>
+            <h1 className="font-noto-sans-georgian text-3xl font-bold text-gray-900 mb-6">{product.name}</h1>
             <div className="flex gap-10">
                 <div className="w-1/2">
                     <img
@@ -122,60 +122,48 @@ const DetailPage = () => {
                     <p className="text-lg text-gray-700 flex items-center">
                         <p className="font-circe" style={{ fontSize: 16, fontWeight: 400 }}>Производитель:</p>
                         <hr style={{ color: '#00000040' }} className="flex-grow border-t-2 border-dashed mx-2" />
-                        {product.manufacturer || "Noma’lum"}
+                        <p style={{fontSize: 16 , fontWeight:700}}> {product.manufacturer || "Noma’lum"}</p>
                     </p>
                     <p className="text-lg text-gray-700 flex items-center">
                         <p style={{ fontSize: 16, fontWeight: 400 }} className="font-circe">Артикул:</p>
                         <hr style={{ color: '#00000040' }} className="flex-grow border-t-2 border-dashed mx-2" />
-                        {product.article || "Noma’lum"}
+                        <p style={{fontSize: 16 , fontWeight:700}}> {product.article || "Noma’lum"}</p>
                     </p>
                     <p className="text-lg text-gray-700 flex items-center">
                         <p className="font-circe" style={{ fontSize: 16, fontWeight: 400 }}>цвет:</p>
                         <hr style={{ color: '#00000040' }} className="flex-grow border-t-2 border-dashed mx-2" />
-                        {product.color || "Noma’lum"}
+                        <p style={{fontSize: 16 , fontWeight:700}}> {product.color || "Noma’lum"}</p>
                     </p>
                     <p className="text-lg text-gray-700 flex items-center">
                         <p className="font-circe" style={{ fontSize: 16, fontWeight: 400 }}>Странa :</p>
                         <hr style={{ color: '#00000040' }} className="flex-grow border-t-2 border-dashed mx-2" />
-                        {product.color || "Noma’lum"}
+                        <p style={{fontSize:16 , fontWeight: 700}}>Россия</p>
+                    </p>
+                    <p className="text-lg text-gray-700 flex items-center">
+                        <p className="font-circe" style={{ fontSize: 16, fontWeight: 400 }}>Наличие:</p>
+                        <hr style={{ color: '#00000040' }} className="flex-grow border-t-2 border-dashed mx-2" />
+                        <p  style={{color:'#219653' , fontSize: 16 , fontWeight:700}}>В наличии</p>
                     </p>
                     <div className="grid grid-cols-3 gap-4">
-                        <label className="flex items-center gap-2">
-                            <input type="radio" />
-                            200x2000 мм
-                        </label>
-                        <label className="flex items-center gap-2">
-                            <input type="radio" />
-                            300x2000 мм
-                        </label>
-                        <label className="flex items-center gap-2">
-                            <input type="radio" />
-                            400x2000 мм
-                        </label>
-                        <label className="flex items-center gap-2">
-                            <input type="radio" />
-                            500x2000 мм
-                        </label>
-                        <label className="flex items-center gap-2">
-                            <input type="radio" />
-                            600x2000 мм
-                        </label>
-                        <label className="flex items-center gap-2">
-                            <input type="radio" />
-                            700x2000 мм
-                        </label>
-                        <label className="flex items-center gap-2">
-                            <input type="radio" />
-                            800x2000 мм
-                        </label>
-                        <label className="flex items-center gap-2">
-                            <input type="radio" />
-                            900x2000 мм
-                        </label>
-                        <label className="flex items-center gap-2">
-                            <input type="radio" />
-                            Нестандартный
-                        </label>
+                        {[
+                            "200x2000 мм",
+                            "300x2000 мм",
+                            "400x2000 мм",
+                            "500x2000 мм",
+                            "600x2000 мм",
+                            "700x2000 мм",
+                            "800x2000 мм",
+                            "900x2000 мм",
+                            "Нестандартный",
+                        ].map((size, index) => (
+                            <label key={index} className="flex items-center gap-2 cursor-pointer">
+                                <input type="radio" name="doorSize" className="hidden peer" />
+                                <div className="w-6 h-6 border-2 border-gray-400 rounded-lg flex items-center justify-center peer-checked:border-red-500">
+                                    <div className="w-3 h-3 bg-transparent rounded-full peer-checked:bg-red-500"></div>
+                                </div>
+                                {size}
+                            </label>
+                        ))}
                     </div>
                     {/* swiper */}
                     <Swiper
@@ -185,17 +173,41 @@ const DetailPage = () => {
                         modules={[Navigation]}
                         className="mySwiper"
                     >
-                        <SwiperSlide>Slide 1</SwiperSlide>
-                        <SwiperSlide>Slide 2</SwiperSlide>
-                        <SwiperSlide>Slide 3</SwiperSlide>
-                        <SwiperSlide>Slide 4</SwiperSlide>
+                        <SwiperSlide>
+                            <button
+                                style={{ width: 80, height: 80 }}
+                                className=" bg-red-400 rounded-full border-2 border-gray-300"
+                            ></button>
+                        </SwiperSlide>
+                        <SwiperSlide>  <button
+                            style={{ width: 80, height: 80 }}
+                            className="bg-red-300 rounded-full border-2 border-gray-300"
+                        ></button></SwiperSlide>
+                        <SwiperSlide>
+                            <button
+                                style={{ width: 80, height: 80 }}
+                                className=" bg-purple-600 rounded-full border-2 border-gray-300"
+                            ></button>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <button
+                                style={{ width: 80, height: 80 }}
+                                className=" bg-blue-400 rounded-full border-2 border-gray-300"
+                            ></button>
+                        </SwiperSlide>
 
-
-                        <div className="swiper-button-next">▶</div>
-                        <div className="swiper-button-prev">◀</div>
+                        <div style={{ color: '#A08961' }} className="swiper-button-next"></div>
+                        <div style={{ color: '#A08961' }} className="swiper-button-prev"></div>
                     </Swiper>
-                    <p className="text-2xl font-bold text-[#a78b5a]">
-                        {product.finalPrice} р.
+
+                    <div style={{ widht: 570, height: 42, backgroundColor: '#ece7e7' }} className="flex items-center justify-center">
+                        <p style={{ fontSize: 16, fontWeight: 700, color: '#FF3C38' }} className="font-circe">
+                            Работаем только с юридическими лицами.
+                        </p>
+                    </div>
+                    <p style={{ fontSize: 30, fontWeight: 700, color: '#FF3C38', color: '#000' }} className="font-circe">
+                        {product.finalPrice} руб.
+
                     </p>
                     <div className="flex items-center">
                         <button style={{ width: 277, height: 52 }} className=" bg-custom-red text-white py-3 px-6 transition-colors duration-300 font-medium">
