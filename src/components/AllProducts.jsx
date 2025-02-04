@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-
+import { NavLink } from 'react-router-dom';
 // select ui 
 
 const AllProducts = () => {
@@ -40,6 +40,7 @@ const AllProducts = () => {
     
 
     const ProductCard = ({ product }) => (
+        <NavLink to={`/detailProducts/${product.id}`}>
         <div className="w-[330px] h-[483px] bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col">
             <div className="relative h-[240px]">
                 {product.images.length > 0 ? (
@@ -80,12 +81,13 @@ const AllProducts = () => {
                 </button>
             </div>
         </div>
+        </NavLink>
     );
 
     return (
         <div className=" min-h-screen">
             <div className="container mx-auto px-4 py-12">
-                <h1 className="text-4xl font-bold text-gray-900 text-center mb-12">
+                <h1 style={{fontSize: 34 , fontWeight: 700}} className="font-noto-sans-georgian  font-bold text-gray-900 text-center mb-12">
                     Наши двери
                 </h1>
                 {loading ? (

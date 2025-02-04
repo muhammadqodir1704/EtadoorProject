@@ -32,8 +32,8 @@ const EtadoorImg = () => {
         <div style={{ backgroundColor: '#F9F9F9', width: '100%', height: '100vh' }}>
             <div className='container mx-auto mt-10'>
                 <div className='flex justify-center items-center flex-col'>
-                    <h4 style={{ fontSize: 34, fontWeight: 700, marginTop: 40 }}>О дверях «EtaDoor»</h4>
-                    <p style={{ fontSize: 20, paddingTop: 30 }} className='text-center'>Влагостойкие композитные двери «EtaDoor» , изготовлены из комбинации жесткого ПВХ
+                    <h4 className='font-noto-sans-georgian' style={{ fontSize: 34, fontWeight: 700, marginTop: 40 }}>О дверях «EtaDoor»</h4>
+                    <p style={{ fontSize: 20, paddingTop: 30 , fontWeight:400}} className='text-center'>Влагостойкие композитные двери «EtaDoor» , изготовлены из комбинации жесткого ПВХ
                         и компактного древесно-полимерного композита.
                         Эти двери обладают целым спектром уникальных свойств, что позволяет их использовать в самых экстремальных условиях.</p>
                 </div>

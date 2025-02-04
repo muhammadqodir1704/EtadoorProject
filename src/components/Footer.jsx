@@ -70,15 +70,15 @@ const Footer = () => {
           <li>Сотрудничество</li>
         </ul>
         <div className="w-70">
-          <button className="flex items-center mb-4 p-2 bg-gray-200 w-full text-sm">
+          <button style={{color: '#142839' , fontSize: 20 , width: 360 , height:50 , backgroundColor: "#F9F9F9"}} className="flex items-center justify-center mb-4 w-full text-sm border border-custom-brown">
             <FiPhoneCall className="mr-2 text-red-600" />
             Заказать звонок
           </button>
-          <button className="flex items-center mb-4 p-2 bg-gray-200 w-full text-sm">
+          <button style={{color: '#142839' , fontSize:20 , width: 360 , height: 50 , backgroundColor: "#F9F9F9"}} className="flex items-center justify-center mb-4  w-full text-sm border border-custom-brown">
             <FaFileUpload className="mr-2 text-red-600" />
             Запросить прайс-лист
           </button>
-          <button className="p-2 bg-gray-200 w-full text-sm">
+          <button  style={{color: '#142839', fontSize: 20 , width: 360 , height: 50 , backgroundColor: "#F9F9F9"}} className="flex items-center justify-center mb-4  w-full text-sm border border-custom-brown">
             Стать партнером
           </button>
         </div>

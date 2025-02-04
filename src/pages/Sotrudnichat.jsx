@@ -8,26 +8,28 @@ import Frame6 from '../assets/Frame6.png';
 import Frame7 from '../assets/Frame7.png';
 import Dverxiy from '../components/Dverxiy';
 import { Link } from 'react-router-dom';
-import EtadoorImg from './../components/EtadoorImg';
 
 const Sotrudnichat = () => {
   const items = [
-    { img: Frame1, text: 'Большой склад  готовой продукции' },
-    { img: Frame2, text: 'Широкий ассортимент продукции' },
-    { img: Frame3, text: 'Весь товар сертифицирован' },
-    { img: Frame4, text: 'Доставка по всей территории РФ' },
+    { img: Frame1, text: "Большой склад  готовой продукции" },
+    { img: Frame2, text: "Широкий ассортимент продукции" },
+    { img: Frame3, text: "Весь товар сертифицирован" },
+    { img: Frame4, text: "Доставка по всей территории РФ" },
   ];
   const items2 = [
-    { img: Frame5, text: 'Большой склад готовой продукции' },
-    { img: Frame6, text: 'Большой склад готовой продукции' },
-    { img: Frame7, text: 'Большой склад готовой продукции' },
-  ]
+    { img: Frame5, text: "Большой склад готовой продукции" },
+    { img: Frame6, text: "Большой склад готовой продукции" },
+    { img: Frame7, text: "Большой склад готовой продукции" },
+  ];
 
   return (
     <>
       <div className="container p-6 mx-auto">
         <div>
-          <Link to={'/'}>Главная</Link> / <Link to={'/sotrudnichat'} className='text-stone-500'>Сотрудничать</Link>
+          <Link to={"/"}>Главная</Link> /{" "}
+          <Link to={"/sotrudnichat"} className="text-stone-500">
+            Сотрудничать
+          </Link>
         </div>
         <h1 className="m-3 mb-10 text-2xl font-bold text-black md:text-4xl">
           Сотрудничать
@@ -36,9 +38,12 @@ const Sotrudnichat = () => {
           {items.map((item, index) => (
             <div
               key={index}
-              className="flex flex-col items-center gap-4 p-6 transition-shadow duration-300"
-            >
-              <img src={item.img} alt="" className="w-20 h-20 duration-200 ease-in hover:scale-105" />
+              className="flex flex-col items-center gap-4 p-6 transition-shadow duration-300">
+              <img
+                src={item.img}
+                alt=""
+                className="w-20 h-20 duration-200 ease-in hover:scale-105"
+              />
               <p className="text-lg text-center text-black md:text-xl w-[200px]">
                 {item.text}
               </p>
@@ -49,9 +54,12 @@ const Sotrudnichat = () => {
           {items2.map((item, index) => (
             <div
               key={index}
-              className="flex flex-col items-center gap-4 p-6 transition-shadow duration-300"
-            >
-              <img src={item.img} alt="" className="w-20 h-20 duration-200 ease-in hover:scale-105" />
+              className="flex flex-col items-center gap-4 p-6 transition-shadow duration-300">
+              <img
+                src={item.img}
+                alt=""
+                className="w-20 h-20 duration-200 ease-in hover:scale-105"
+              />
               <p className="text-lg text-center text-black md:text-xl w-[200px]">
                 {item.text}
               </p>
@@ -67,5 +75,5 @@ const Sotrudnichat = () => {
 };
 
 export default Sotrudnichat
-//*asReactComponent={() => <Dverxiy />}
+// salom dunyo
 

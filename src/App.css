@@ -1,13 +1,49 @@
-.scroll-container::-webkit-scrollbar {
-  width: 8px; /* Scrollbar kengligi */
+.scroll-container {
+  max-height: 24rem; /* 384px */
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #FF6F55 transparent;
 }
 
-.scroll-container::-webkit-scrollbar-thumb {
-  background-color: #FF6F55;
-  border-radius: 4px;
+.scroll-container ul {
+  padding: 0;
+  margin: 0;
+  
+  list-style: none;
+}
+
+/* Chrome, Edge, va Safari uchun */
+.scroll-container::-webkit-scrollbar {
+  width: 6px;
 }
 
 .scroll-container::-webkit-scrollbar-track {
-  background-color: #f1f1f1;
+  background: #f1f1f1;
   border-radius: 4px;
 }
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background-color: #ff6f55;
+  border-radius: 4px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb:hover {
+  background-color: darkred;
+}
+
+/* LI elementlarining default holati */
+.scroll-container li {
+  width: 400px;
+  padding: 5px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  transition: border 0.3s ease-in-out;
+}
+
+/* LI tanlanganda qizil border chiqadi */
+.scroll-container li:hover {
+  border: 2px solid #FF6F55;
+}
+
+/* swiper styles */
+
