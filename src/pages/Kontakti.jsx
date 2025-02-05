@@ -13,13 +13,15 @@ import {
 import { FiPhoneCall } from "react-icons/fi";
 import { MdCall } from "react-icons/md";
 import { TbMapPin } from "react-icons/tb";
-import myImage from "../Images/angular.png";
 import Xarita from "../components/Xarita";
-import Footer from "../components/Footer";
-
+import { Link } from "react-router-dom";
 const Kontakti = () => {
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto p-6 min-h-screen rounded-lg">
+     <Link to={"/"}>Главная</Link> /{" "}
+        <Link to={"/kontakti"} className="text-stone-500">
+        Контакты
+        </Link>
       <div
         className="p-7"
         style={{
@@ -141,10 +143,6 @@ const Kontakti = () => {
               className="rounded-lg shadow-md"></iframe>
           </div>
         </div>
-
-        <Xarita />
-
-        <Footer />
       </div>
     </div>
   );

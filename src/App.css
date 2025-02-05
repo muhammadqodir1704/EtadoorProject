@@ -2,13 +2,13 @@
   max-height: 24rem; /* 384px */
   overflow-y: auto;
   scrollbar-width: thin;
-  scrollbar-color: red transparent;
+  scrollbar-color: #FF6F55 transparent;
 }
 
-/* Faqat <li> elementlarini skroll ichida tutish */
 .scroll-container ul {
   padding: 0;
   margin: 0;
+  
   list-style: none;
 }
 
@@ -42,5 +42,8 @@
 
 /* LI tanlanganda qizil border chiqadi */
 .scroll-container li:hover {
-  border: 2px solid red;
+  border: 2px solid #FF6F55;
 }
+
+/* swiper styles */
+

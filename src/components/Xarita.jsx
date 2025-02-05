@@ -95,7 +95,7 @@ const Xarita = () => {
           className="rounded-lg shadow-md"></iframe>
       </div>
       <div className="flex-1">
-        <h1 className="text-2xl">Где купить?</h1>
+        <h1 style={{fontSize: 34 , fontWeight: 700}} className="text-2xl font-noto-sans-georgian">Где купить?</h1>
         <div className="mt-7 space-y-4 text-sm cursor-pointer  scroll-container">
           <ul>
             {locations.map((location, index) => (

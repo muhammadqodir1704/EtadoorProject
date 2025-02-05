@@ -8,6 +8,7 @@ import Frame6 from "../assets/Frame6.png";
 import Frame7 from "../assets/Frame7.png";
 import Dverxiy from "../components/Dverxiy";
 import { Link } from "react-router-dom";
+import EtadoorImg from "../components/EtadoorImg";
 
 const Sotrudnichat = () => {
   const items = [
@@ -68,10 +69,10 @@ const Sotrudnichat = () => {
         </div>
         {/* Dverxi img */}
       </div>
+      <EtadoorImg /> <br /><br /><br /><br />
       <Dverxiy />
     </>
   );
 };
 
 export default Sotrudnichat;
-// salom dunyo

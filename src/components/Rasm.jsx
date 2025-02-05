@@ -10,6 +10,7 @@ import domas from "../Images/doma.svg";
 const Rasm = () => {
   return (
     <>
+    <h1 className="text-center font-noto-sans-georgian mt-10" style={{fontSize: 34 , fontWeight:700}}>Наши двери применяют</h1>
       <div className=" flex justify-center mt-10 gap-4">
         <img src={meditsinas} alt="Meditsina" />
         <img src={maktabs} alt="Maktab" />
