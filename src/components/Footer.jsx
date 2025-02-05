@@ -135,24 +135,35 @@ const Footer = () => {
         </button>
       </div>
       <div className="mt-10 flex gap-4 px-36">
-        <button className="border border-black px-9 py-2">
-          <span className=" text-red-600">Я</span>ндекс
-        </button>
+        <a
+          href="https://yandex.uz/"
+          className="border border-black px-9 py-2 font-bold">
+          <span className="text-red-600">Я</span>ндекс
+        </a>
+
         {/* <Link> */}
-        <div className=" border border-black px-9 py-2 items-center cursor-pointer">
+        <div className="border border-black px-9 py-2 flex items-center cursor-pointer font-bold">
           <img src={vektor} alt="" width={150} />
         </div>
         {/* </Link> */}
-        <button className="border border-black px-9 py-2">
-          <span className=" text-red-600">Я</span>ндекс
-        </button>
-        <div className=" border border-black px-9 py-2 items-center cursor-pointer">
+
+        <a
+          href="https://yandex.uz/"
+          className="border border-black px-9 py-2 font-bold">
+          <span className="text-red-600">Я</span>ндекс
+        </a>
+
+        <div className="border border-black px-9 py-2 flex items-center cursor-pointer font-bold">
           <img src={vektor} alt="" width={150} />
         </div>
-        <button className="border border-black px-9 py-2">
-          <span className=" text-red-600">Я</span>ндекс
-        </button>
+
+        <a
+          href="https://yandex.uz/"
+          className="border border-black px-9 py-2 font-bold">
+          <span className="text-red-600">Я</span>ндекс
+        </a>
       </div>
+
       <div className=" flex gap-2 text-sm font-semibold mt-12 px-36">
         <p>© Двери Etadoor. 2021 г</p>
         <p>Политика конфиденциальности</p>
