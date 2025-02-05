@@ -53,7 +53,7 @@ const Navbar = () => {
             <CiViewList style={{ fontSize: 28 }} />
             <p className="font-circe" style={{ fontSize: 14 , fontWeight: 700 , }}>Запросить прайс-лист</p>
           </button>
-          {/* {modalOpen && <ZaprositModal onClose={() => setModalOpen(false)} />} */}
+          {modalOpen && <ZaprositModal onClose={() => setModalOpen(false)} />}
           </div>
       </div>
       <hr className="mt-4 border-t-2 border-custom-brown" />
