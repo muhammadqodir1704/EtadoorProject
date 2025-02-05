@@ -18,6 +18,7 @@ import Pagonaj from './pages/Pagonaj';
 import Sotrudnichat from './pages/Sotrudnichat';
 import DetailPage from './components/DetailPage';
 import Okampani from './pages/Okampani';
+import DashboardLayout from './Dashboard/DashboardLayout';
 import "./App.css"
 
 const router = createBrowserRouter([
