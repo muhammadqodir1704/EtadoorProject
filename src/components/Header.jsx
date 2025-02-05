@@ -19,7 +19,7 @@ export default function Header() {
         <Tab label="Фурнитура" LinkComponent={Link} to="/furnitura" />
         <Tab label="Где купить" LinkComponent={Link} to="/gde-kupit" />
         <Tab label="Сотрудничать" LinkComponent={Link} to="/sotrudnichat" />
-        <Tab label="О компании" LinkComponent={Link} to="/o-kompanii" />
+        <Tab label="Наши работы" LinkComponent={Link} to="/o-kompanii" />
         <Tab label="Контакты" LinkComponent={Link} to="/kontakti" />
       </Tabs>
     </Box>
