@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import Rasm from "./Rasm";
-import Xarita from "./Xarita";
-import Footer from "./Footer";
 import Input from "./Input";
 import EtadoorImg from "./EtadoorImg";
 import { Link } from "react-router-dom";
@@ -14,17 +11,20 @@ const KatalogDverey = () => {
   useEffect(() => {
     const fetchDoors = async () => {
       try {
-        const response = await fetch('https://etadoor.koyeb.app/api/doors?page=0&size=20', {
-          method: 'GET',
-          headers: {
-            Accept: 'application/json',
-          },
-        });
+        const response = await fetch(
+          "https://etadoor.koyeb.app/api/doors?page=0&size=20",
+          {
+            method: "GET",
+            headers: {
+              Accept: "application/json",
+            },
+          }
+        );
         const result = await response.json();
-        setDoors(result.data || []); 
+        setDoors(result.data || []);
         setLoading(false);
       } catch (error) {
-        console.error('API xatolik:', error);
+        console.error("API xatolik:", error);
         setLoading(false);
       }
     };
@@ -40,7 +40,9 @@ const KatalogDverey = () => {
           Каталог дверей
         </Link>
       </div>
-      <h1 style={{ fontSize: 34, fontWeight: 700 }} className=" ms-6 mb-4">Каталог дверей</h1>
+      <h1 style={{ fontSize: 34, fontWeight: 700 }} className=" ms-6 mb-4">
+        Каталог дверей
+      </h1>
       <div className=" grid grid-cols-4 gap-5 justify-items-center">
         {loading && <p>Loading doors...</p>}
         {doors.map((item) => (
@@ -74,10 +76,7 @@ const KatalogDverey = () => {
       <Rasm />
       <Input />
     </div>
-
-
   );
-
 };
 
 export default KatalogDverey;

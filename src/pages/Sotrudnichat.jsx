@@ -39,7 +39,7 @@ const Sotrudnichat = () => {
           {items.map((item, index) => (
             <div
               key={index}
-              className="flex flex-col items-center gap-4 p-6 transition-shadow duration-300">
+              className="flex flex-col items-center gap-4 p-6 transition-shadow duration-300 cursor-pointer">
               <img
                 src={item.img}
                 alt=""
@@ -69,7 +69,10 @@ const Sotrudnichat = () => {
         </div>
         {/* Dverxi img */}
       </div>
-      <EtadoorImg /> <br /><br /><br /><br />
+      <EtadoorImg /> <br />
+      <br />
+      <br />
+      <br />
       <Dverxiy />
     </>
   );
