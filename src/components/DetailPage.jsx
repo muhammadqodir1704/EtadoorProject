@@ -6,6 +6,7 @@ import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Zakaz from "../Modal/Zakaz";
 import ZaprositModal from "../Modal/ZaprositModal";
+import SimilarProduct from "./SimilarProduct";
 
 // Import Swiper styles
 import "swiper/css";
@@ -84,7 +85,7 @@ const DetailPage = () => {
 
   return (
     <div>
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 py-12 ">
         <h1 className="font-noto-sans-georgian text-3xl font-bold text-gray-900 mb-6">
           {product.name}
         </h1>
@@ -312,6 +313,8 @@ const DetailPage = () => {
             </div>
           </div>
         </div>
+        <SimilarProduct />
+
       </div>
       <EtadoorImg />
     </div>
