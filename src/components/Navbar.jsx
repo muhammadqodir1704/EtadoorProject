@@ -6,7 +6,8 @@ import Logo from "../Images/Frame 3.svg";
 import ZaprositModal from "../Modal/ZaprositModal";
 
 const Navbar = () => {
-  const [modalOpen, setModalOpen] =useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
+
   return (
     <nav className="p-4 bg-transparent">
       <div className="container flex items-center justify-between mx-auto">
@@ -17,7 +18,7 @@ const Navbar = () => {
               src={Logo}
               alt="Logo"
             />
-            <p style={{ fontWeight: 700, fontSize: 24 ,}} className="ml-4 font-noto-sans-georgian">
+            <p style={{ fontWeight: 700, fontSize: 24 }} className="ml-4 font-noto-sans-georgian">
               Влагостойкие двери <br /> от производителя
             </p>
           </a>
@@ -29,10 +30,13 @@ const Navbar = () => {
                 fontFamily: "Noto Sans Georgian",
                 fontWeight: 700,
                 fontSize: 32,
-                color: "#142839"
+                color: "#142839",
               }}
             >
-              <span style={{fontSize: 34 , fontWeight: 400}} className="text-custom-brown">+7 499</span> 375 77 65
+              <span style={{ fontSize: 34, fontWeight: 400 }} className="text-custom-brown">
+                +7 499
+              </span>{" "}
+              375 77 65
             </p>
           </li>
           <div className="flex space-x-2">
@@ -47,17 +51,25 @@ const Navbar = () => {
         <div className="flex space-x-4">
           <button className="flex items-center px-4 py-2 border rounded-md border-custom-red">
             <MdOutlinePermPhoneMsg className="text-custom-red" style={{ fontSize: 28 }} />
-            <p className="font-circe" style={{ fontSize: 14 ,fontWeight: 700, color: "#142839"}}>Заказать звонок</p>
+            <p className="font-circe" style={{ fontSize: 14, fontWeight: 700, color: "#142839" }}>
+              Заказать звонок
+            </p>
           </button>
-          <button onClick={()=> setModalOpen(true)  } className="flex items-center px-4 py-2 text-white rounded-md bg-custom-red">
+          <button
+            onClick={() => setModalOpen(true)}
+            className="flex items-center px-4 py-2 text-white rounded-md bg-custom-red"
+          >
             <CiViewList style={{ fontSize: 28 }} />
-            <p className="font-circe" style={{ fontSize: 14 , fontWeight: 700 , }}>Запросить прайс-лист</p>
+            <p className="font-circe" style={{ fontSize: 14, fontWeight: 700 }}>
+              Запросить прайс-лист
+            </p>
           </button>
-          
-          </div>
+        </div>
       </div>
       <hr className="mt-4 border-t-2 border-custom-brown" />
 
+      {/* Modalni chaqiramiz va `open` va `handleClose` propslarini yuboramiz */}
+      <ZaprositModal open={modalOpen} handleClose={() => setModalOpen(false)} />
     </nav>
   );
 };
