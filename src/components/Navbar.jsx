@@ -49,11 +49,11 @@ const Navbar = () => {
             <MdOutlinePermPhoneMsg className="text-custom-red" style={{ fontSize: 28 }} />
             <p className="font-circe" style={{ fontSize: 14 ,fontWeight: 700, color: "#142839"}}>Заказать звонок</p>
           </button>
-          <button onClick={()=> setModalOpen(true)} className="flex items-center px-4 py-2 text-white rounded-md bg-custom-red">
+          <button onClick={()=> setModalOpen(true)  } className="flex items-center px-4 py-2 text-white rounded-md bg-custom-red">
             <CiViewList style={{ fontSize: 28 }} />
             <p className="font-circe" style={{ fontSize: 14 , fontWeight: 700 , }}>Запросить прайс-лист</p>
           </button>
-          {modalOpen && <ZaprositModal onClose={() => setModalOpen(false)} />}
+          
           </div>
       </div>
       <hr className="mt-4 border-t-2 border-custom-brown" />
