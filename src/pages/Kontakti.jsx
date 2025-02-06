@@ -13,21 +13,20 @@ import {
 import { FiPhoneCall } from "react-icons/fi";
 import { MdCall } from "react-icons/md";
 import { TbMapPin } from "react-icons/tb";
-import Xarita from "../components/Xarita";
 import { Link } from "react-router-dom";
 const Kontakti = () => {
   return (
     <div className="container mx-auto p-6 min-h-screen rounded-lg">
-     <Link to={"/"}>Главная</Link> /{" "}
-        <Link to={"/kontakti"} className="text-stone-500">
+      <Link to={"/"}>Главная</Link>
+      <Link to={"/kontakti"} className="text-stone-500">
         Контакты
-        </Link>
+      </Link>
       <div
         className="p-7"
         style={{
           fontFamily: "'Circe', sans-serif",
         }}>
-        <h1>Контакты</h1>
+        <h1 className=" font-bold text-2xl">Контакты</h1>
         <div className="flex flex-wrap gap-10 mt-10">
           <div className="flex-1">
             <h2 className="text-base font-semibold">Офис г. Москва</h2>

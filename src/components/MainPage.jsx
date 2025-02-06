@@ -9,10 +9,12 @@ import { Link } from "react-router-dom";
 const MainPage = () => {
   return (
     <div className="container mx-auto">
-      <Link to={"/"}>Главная</Link> {" "}
+      <Link to={"/"}>Главная</Link>{" "}
       <div className="flex justify-between items-center">
         <div className="flex-1">
-          <h1 style={{ fontSize: 48 , fontWeight:700}} className="text-4xl font-bold font-noto-sans-georgian">
+          <h1
+            style={{ fontSize: 48, fontWeight: 700 }}
+            className="text-4xl font-bold font-noto-sans-georgian">
             Влагостойкие композитные <br /> двери Etadoor
           </h1>
           <div className="flex justify-between mt-4">

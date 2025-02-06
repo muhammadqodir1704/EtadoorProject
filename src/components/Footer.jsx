@@ -70,15 +70,39 @@ const Footer = () => {
           <li>Сотрудничество</li>
         </ul>
         <div className="w-70">
-          <button style={{color: '#142839' , fontSize: 20 , width: 360 , height:50 , backgroundColor: "#F9F9F9"}} className="flex items-center justify-center mb-4 w-full text-sm border border-custom-brown">
+          <button
+            style={{
+              color: "#142839",
+              fontSize: 20,
+              width: 360,
+              height: 50,
+              backgroundColor: "#F9F9F9",
+            }}
+            className="flex items-center justify-center mb-4 w-full text-sm border border-custom-brown">
             <FiPhoneCall className="mr-2 text-red-600" />
             Заказать звонок
           </button>
-          <button style={{color: '#142839' , fontSize:20 , width: 360 , height: 50 , backgroundColor: "#F9F9F9"}} className="flex items-center justify-center mb-4  w-full text-sm border border-custom-brown">
+          <button
+            style={{
+              color: "#142839",
+              fontSize: 20,
+              width: 360,
+              height: 50,
+              backgroundColor: "#F9F9F9",
+            }}
+            className="flex items-center justify-center mb-4  w-full text-sm border border-custom-brown">
             <FaFileUpload className="mr-2 text-red-600" />
             Запросить прайс-лист
           </button>
-          <button  style={{color: '#142839', fontSize: 20 , width: 360 , height: 50 , backgroundColor: "#F9F9F9"}} className="flex items-center justify-center mb-4  w-full text-sm border border-custom-brown">
+          <button
+            style={{
+              color: "#142839",
+              fontSize: 20,
+              width: 360,
+              height: 50,
+              backgroundColor: "#F9F9F9",
+            }}
+            className="flex items-center justify-center mb-4  w-full text-sm border border-custom-brown">
             Стать партнером
           </button>
         </div>
@@ -141,11 +165,12 @@ const Footer = () => {
           <span className="text-red-600">Я</span>ндекс
         </a>
 
-        {/* <Link> */}
-        <div className="border border-black px-9 py-2 flex items-center cursor-pointer font-bold">
+        <a
+          href="https://ru.wikipedia.org/wiki/%D0%91%D0%B8%D0%B7%D0%BD%D0%B5%D1%81"
+          className="border border-black px-9 py-2 flex items-center
+          cursor-pointer font-bold">
           <img src={vektor} alt="" width={150} />
-        </div>
-        {/* </Link> */}
+        </a>
 
         <a
           href="https://yandex.uz/"
@@ -153,9 +178,12 @@ const Footer = () => {
           <span className="text-red-600">Я</span>ндекс
         </a>
 
-        <div className="border border-black px-9 py-2 flex items-center cursor-pointer font-bold">
+        <a
+          href="https://ru.wikipedia.org/wiki/%D0%91%D0%B8%D0%B7%D0%BD%D0%B5%D1%81"
+          className="border border-black px-9 py-2 flex items-center
+          cursor-pointer font-bold">
           <img src={vektor} alt="" width={150} />
-        </div>
+        </a>
 
         <a
           href="https://yandex.uz/"
