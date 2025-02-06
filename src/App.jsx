@@ -36,7 +36,6 @@ const router = createBrowserRouter([
             <Input />
             <EtadoorImg />
             <Dverxiy />
-            <Xarita />
           </>
         ),
       },
