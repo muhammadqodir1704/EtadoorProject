@@ -52,7 +52,7 @@ const Navbar = () => {
         <div className="flex space-x-4">
           <button 
           onClick={() =>setZakazatZvanok(true)}
-          className="flex items-center px-4 py-2 border rounded-md border-custom-red">
+          className="flex items-center px-4 py-2 border border-custom-red">
             <MdOutlinePermPhoneMsg className="text-custom-red" style={{ fontSize: 28 }} />
             <p className="font-circe" style={{ fontSize: 14, fontWeight: 700, color: "#142839" }}>
               Заказать звонок
@@ -60,7 +60,7 @@ const Navbar = () => {
           </button>
           <button
             onClick={() => setModalOpen(true)}
-            className="flex items-center px-4 py-2 text-white rounded-md bg-custom-red"
+            className="flex items-center px-4 py-2 text-white bg-custom-red"
           >
             <CiViewList style={{ fontSize: 28 }} />
             <p className="font-circe" style={{ fontSize: 14, fontWeight: 700 }}>
