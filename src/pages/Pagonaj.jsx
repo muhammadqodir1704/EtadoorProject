@@ -197,7 +197,7 @@ const Pagonaj = () => {
   ];
 
   return (
-    <div className="container mx-auto p-6 min-h-screen rounded-lg">
+    <div className="container mx-auto p-6 rounded-lg">
       <div className="flex items-center px-10 mb-6">
         <Link to="/" className="text-black hover:underline">
           Главная |

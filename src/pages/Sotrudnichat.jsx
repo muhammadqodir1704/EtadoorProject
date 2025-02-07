@@ -69,10 +69,7 @@ const Sotrudnichat = () => {
         </div>
         {/* Dverxi img */}
       </div>
-      <EtadoorImg /> <br />
-      <br />
-      <br />
-      <br />
+      <EtadoorImg />
       <Dverxiy />
     </>
   );

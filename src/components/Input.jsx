@@ -1,7 +1,7 @@
 const Input = () => {
   return (
     <>
-      <div className="flex flex-col md:flex-row justify-center mt-12 space-y-8 md:space-y-0 md:space-x-8 px-4 bg-gray-900 py-10">
+      <div className=" mx-auto flex flex-col md:flex-row justify-center mt-12 space-y-8 md:space-y-0 md:space-x-8  bg-gray-900 py-10">
         <div className="text-center max-w-lg">
           <h1 className="text-red-500 mb-4">Запросить прайс-лист</h1>
           <p className="text-gray-300 mb-6 text-xl font-semibold">
