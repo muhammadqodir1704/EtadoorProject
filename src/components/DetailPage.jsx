@@ -4,6 +4,9 @@ import EtadoorImg from "./EtadoorImg";
 // swiper color n
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import Zakaz from "../Modal/Zakaz";
+import ZaprositModal from "../Modal/ZaprositModal";
+import SimilarProduct from "./SimilarProduct";
 
 // Import Swiper styles
 import "swiper/css";
@@ -17,6 +20,8 @@ const DetailPage = () => {
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [direction, setDirection] = useState(getDirection());
+  const [openZakaz, setOpenZakaz] = useState(false);
+  const [openZaprosit, setOpenZaprosit] = useState(false);
 
   useEffect(() => {
     const handleResize = () => setDirection(getDirection());
@@ -80,7 +85,7 @@ const DetailPage = () => {
 
   return (
     <div>
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 py-12 ">
         <h1 className="font-noto-sans-georgian text-3xl font-bold text-gray-900 mb-6">
           {product.name}
         </h1>
@@ -106,7 +111,8 @@ const DetailPage = () => {
             <p className="text-lg text-gray-700 flex items-center">
               <p
                 className="font-circe"
-                style={{ fontSize: 16, fontWeight: 400 }}>
+                style={{ fontSize: 16, fontWeight: 400 }}
+              >
                 Производитель:
               </p>
               <hr
@@ -121,7 +127,8 @@ const DetailPage = () => {
             <p className="text-lg text-gray-700 flex items-center">
               <p
                 style={{ fontSize: 16, fontWeight: 400 }}
-                className="font-circe">
+                className="font-circe"
+              >
                 Артикул:
               </p>
               <hr
@@ -136,7 +143,8 @@ const DetailPage = () => {
             <p className="text-lg text-gray-700 flex items-center">
               <p
                 className="font-circe"
-                style={{ fontSize: 16, fontWeight: 400 }}>
+                style={{ fontSize: 16, fontWeight: 400 }}
+              >
                 цвет:
               </p>
               <hr
@@ -151,7 +159,8 @@ const DetailPage = () => {
             <p className="text-lg text-gray-700 flex items-center">
               <p
                 className="font-circe"
-                style={{ fontSize: 16, fontWeight: 400 }}>
+                style={{ fontSize: 16, fontWeight: 400 }}
+              >
                 Странa :
               </p>
               <hr
@@ -163,7 +172,8 @@ const DetailPage = () => {
             <p className="text-lg text-gray-700 flex items-center">
               <p
                 className="font-circe"
-                style={{ fontSize: 16, fontWeight: 400 }}>
+                style={{ fontSize: 16, fontWeight: 400 }}
+              >
                 Наличие:
               </p>
               <hr
@@ -188,7 +198,8 @@ const DetailPage = () => {
               ].map((size, index) => (
                 <label
                   key={index}
-                  className="flex items-center gap-2 cursor-pointer">
+                  className="flex items-center gap-2 cursor-pointer"
+                >
                   <input type="radio" name="doorSize" className="hidden peer" />
                   <div className="w-6 h-6 border-2 border-gray-400 rounded-lg flex items-center justify-center peer-checked:border-red-500">
                     <div className="w-3 h-3 bg-transparent rounded-full peer-checked:bg-red-500"></div>
@@ -206,43 +217,52 @@ const DetailPage = () => {
                 prevEl: ".swiper-button-prev",
               }}
               modules={[Navigation]}
-              className="mySwiper">
+              className="mySwiper"
+            >
               <SwiperSlide>
                 <button
                   style={{ width: 80, height: 80 }}
-                  className=" bg-red-400 rounded-full border-2 border-gray-300"></button>
+                  className=" bg-red-400 rounded-full border-2 border-gray-300"
+                ></button>
               </SwiperSlide>
               <SwiperSlide>
                 {" "}
                 <button
                   style={{ width: 80, height: 80 }}
-                  className="bg-red-300 rounded-full border-2 border-gray-300"></button>
+                  className="bg-red-300 rounded-full border-2 border-gray-300"
+                ></button>
               </SwiperSlide>
               <SwiperSlide>
                 <button
                   style={{ width: 80, height: 80 }}
-                  className=" bg-purple-600 rounded-full border-2 border-gray-300"></button>
+                  className=" bg-purple-600 rounded-full border-2 border-gray-300"
+                ></button>
               </SwiperSlide>
               <SwiperSlide>
                 <button
                   style={{ width: 80, height: 80 }}
-                  className=" bg-blue-400 rounded-full border-2 border-gray-300"></button>
+                  className=" bg-blue-400 rounded-full border-2 border-gray-300"
+                ></button>
               </SwiperSlide>
 
               <div
                 style={{ color: "#A08961" }}
-                className="swiper-button-next"></div>
+                className="swiper-button-next"
+              ></div>
               <div
                 style={{ color: "#A08961" }}
-                className="swiper-button-prev"></div>
+                className="swiper-button-prev"
+              ></div>
             </Swiper>
 
             <div
               style={{ widht: 570, height: 42, backgroundColor: "#ece7e7" }}
-              className="flex items-center justify-center">
+              className="flex items-center justify-center"
+            >
               <p
                 style={{ fontSize: 16, fontWeight: 700, color: "#FF3C38" }}
-                className="font-circe">
+                className="font-circe"
+              >
                 Работаем только с юридическими лицами.
               </p>
             </div>
@@ -253,23 +273,48 @@ const DetailPage = () => {
                 color: "#FF3C38",
                 color: "#000",
               }}
-              className="font-circe">
+              className="font-circe"
+            >
               {product.finalPrice} руб.
             </p>
             <div className="flex items-center">
               <button
+                onClick={() => setOpenZakaz(true)}
                 style={{ width: 277, height: 52 }}
-                className=" bg-custom-red text-white py-3 px-6 transition-colors duration-300 font-medium">
+                className=" bg-custom-red text-white py-3 px-6 transition-colors duration-300 font-medium"
+              >
                 Заказать
               </button>
               <button
+               onClick={() => setOpenZaprosit(true)}
                 style={{ width: 277, height: 52 }}
-                className="border border-custom-brown py-3 px-6 text-custom-black  transition-colors duration-300 font-medium ml-4">
+                className="border border-custom-brown py-3 px-6 text-custom-black  transition-colors duration-300 font-medium ml-4"
+              >
                 Запросить прайс-лист
               </button>
+              <ZaprositModal
+              open={openZaprosit}
+              handleClose={() => setOpenZaprosit(false)}
+              />
+              <Zakaz 
+              open={openZakaz} 
+              handleClose={() => setOpenZakaz(false)} 
+              productData={
+                {
+                  name: product.name,
+                  article: product.article,
+                  color: product.color,
+                  country: "Россия",
+                  availability: "В наличии",
+                }
+              }
+              />
+
             </div>
           </div>
         </div>
+        <SimilarProduct />
+
       </div>
       <EtadoorImg />
     </div>
