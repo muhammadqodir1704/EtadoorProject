@@ -16,8 +16,8 @@ import vektor from "../Images/vektor.png";
 
 const Footer = () => {
   return (
-    <>
-      <div className="flex justify-between mt-10 px-36">
+    <div className="w-full">
+      <div className="container mx-auto flex justify-between mt-10 px-4 lg:px-36">
         <ul className="mt-7 space-y-4 text-sm">
           <li className="flex items-center">
             <button
@@ -107,7 +107,7 @@ const Footer = () => {
           </button>
         </div>
       </div>
-      <div className=" flex gap-4 mt-8 px-36">
+      <div className="container mx-auto flex gap-4 mt-8 lg:px-36">
         <button
           className=" bg-amber-700 p-2"
           style={{
@@ -158,7 +158,7 @@ const Footer = () => {
           <FaFacebookF className=" text-white" />
         </button>
       </div>
-      <div className="mt-10 flex gap-4 px-36">
+      <div className="container mx-auto mt-10 flex gap-4 lg:px-36">
         <a
           href="https://yandex.uz/"
           className="border border-black px-9 py-2 font-bold">
@@ -192,7 +192,7 @@ const Footer = () => {
         </a>
       </div>
 
-      <div className=" flex gap-2 text-sm font-semibold mt-12 px-36">
+      <div className="container mx-auto flex gap-2 text-sm font-semibold mt-12 lg:px-36">
         <p>© Двери Etadoor. 2021 г</p>
         <p>Политика конфиденциальности</p>
         <div className=" flex gap-10">
@@ -206,7 +206,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
