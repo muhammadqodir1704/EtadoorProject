@@ -16,7 +16,7 @@ import { TbMapPin } from "react-icons/tb";
 import { Link } from "react-router-dom";
 const Kontakti = () => {
   return (
-    <div className="container mx-auto p-6 min-h-screen rounded-lg">
+    <div className="container mx-auto p-6 rounded-lg">
       <Link to={"/"}>Главная</Link>
       <Link to={"/kontakti"} className="text-stone-500">
         Контакты
