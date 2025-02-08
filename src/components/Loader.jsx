@@ -9,4 +9,4 @@ const Loader = () => {
 };
 
 export default Loader;
-// loader
+// loaders
