@@ -77,7 +77,7 @@ const ChatBot = () => {
     <div className="fixed bottom-5 right-5">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="bg-[#3390EC] text-white p-3 rounded-full shadow-lg hover:bg-[#2884e0] transition duration-300 flex items-center"
+        className="bg-custom-red text-white p-3 rounded-full shadow-lg hover:bg-custom-brown transition duration-300 flex items-center"
       >
         <MdMessage style={{ fontSize: "24px" , marginRight: "8px" }} />
         Отправьте нам сообщение

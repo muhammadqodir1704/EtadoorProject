@@ -44,8 +44,6 @@ const DetailPage = () => {
         const result = await response.json();
 
         console.log("API dan kelgan ma'lumot:", result);
-
-        // `data` obyekt ekanligini tekshiramiz
         if (
           result.success &&
           typeof result.data === "object" &&

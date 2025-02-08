@@ -1,8 +1,11 @@
 import * as React from "react";
+import { useState } from "react";
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
+import axios from "axios";
+import ZakazPrinyat from "./ZakazPrinyat";
+import "../styles.css";
 
 const style = {
   position: "absolute",
@@ -17,58 +20,118 @@ const style = {
 };
 
 export default function ZaprositModal({ open, handleClose }) {
+  const initialFormState = {
+    itemId: 1,
+    itemType: "DOOR",
+    name: "",
+    phone: "",
+    email: "",
+  };
+
+  const [formData, setFormData] = useState(initialFormState);
+  const [zakazOpen, setZakazOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false); 
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsLoading(true); // Loaderni yoqish
+    console.log("Yuborilayotgan ma'lumot:", formData);
+
+    try {
+      const response = await axios.post(
+        "https://etadoor.up.railway.app/api/v1/additional/price-list",
+        formData
+      );
+      console.log("Success:", response.data);
+      
+      setFormData(initialFormState);
+      handleClose();
+      setZakazOpen(true); 
+
+      setTimeout(() => {
+        setZakazOpen(false);
+      }, 3000);
+
+    } catch (error) {
+      console.error("Error:", error.response?.data || error.message);
+      alert("Price listni yuborishda xatolik yuz berdi!");
+    } finally {
+      setIsLoading(false); 
+    }
+  };
+
   return (
-    <div>
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
+    <>
+      <Modal open={open} onClose={handleClose} aria-labelledby="modal-title">
         <Box sx={style}>
-          <Typography
-            className="text-center text-custom-red"
-            style={{ fontSize: 34, fontWeight: 700 }}
-            id="modal-modal-title"
-            variant="h6"
-          >
+          <Typography className="text-center text-custom-red" style={{ fontSize: 34, fontWeight: 700 }}>
             Запросить прайс-лист
           </Typography>
-          <Typography
-            className="text-center text-custom-black"
-            style={{ fontSize: 18, fontWeight: 400 }}
-            id="modal-modal-description"
-          >
-            Оставьте свои контакты <br /> и мы вышлем вам наш прайс-лист{" "}
+          <Typography className="text-center text-custom-black" style={{ fontSize: 18, fontWeight: 400 }}>
+            Оставьте свои контакты <br /> и мы вышлем вам наш прайс-лист
           </Typography>
-          <div className="mt-3 flex flex-col items-center">
+          <form onSubmit={handleSubmit} className="mt-3 flex flex-col items-center">
             <input
               style={{ width: 450, height: 45 }}
               type="text"
+              name="name"
               placeholder="Ваше имя"
-              className=" p-2 mt-4 w-full text-center bg-white "
+              value={formData.name}
+              onChange={handleChange}
+              className="p-2 mt-4 w-full text-center bg-white"
+              required
             />
             <div className="flex justify-center gap-2">
               <input
                 style={{ width: 220, height: 45 }}
                 type="text"
+                name="phone"
                 placeholder="Телефон*"
-                className=" p-2 mt-4 w-full text-center bg-white "
+                value={formData.phone}
+                onChange={handleChange}
+                className="p-2 mt-4 w-full text-center bg-white"
+                required
               />
               <input
                 style={{ width: 220, height: 45 }}
-                type="text"
+                type="email"
+                name="email"
                 placeholder="Email*"
-                className=" p-2 mt-4 w-full text-center bg-white "
+                value={formData.email}
+                onChange={handleChange}
+                className="p-2 mt-4 w-full text-center bg-white"
+                required
               />
             </div>
+
+            {/* Loader yoki Submit tugmasi */}
             <div className="flex items-center mt-4 gap-8">
-              <p style={{fontSize:12 , fontWeight:400 , }} className="font-circe">Нажимая на кнопку, вы даете согласие с <br/> Политикой конфеденциальнолсти</p>
-              <button className="bg-custom-red text-white font-circe" style={{width: 182 ,height:39 , fontSize: 14 , fontWeight:700 }}>Отправить заявку</button>
+              <p style={{ fontSize: 12, fontWeight: 400 }} className="font-circe">
+                Нажимая на кнопку, вы даете согласие с <br /> Политикой конфиденциальности
+              </p>
+              <button
+                type="submit"
+                className="bg-custom-red text-white font-circe flex justify-center items-center"
+                style={{ width: 182, height: 39, fontSize: 14, fontWeight: 700 }}
+                disabled={isLoading} // Tugma disable holatga keladi
+              >
+                {isLoading ? (
+                  <span className="loader"></span> // Agar loader bo'lsa, tugma o'rniga aylanadi
+                ) : (
+                  "Отправить заявку"
+                )}
+              </button>
             </div>
-          </div>
+          </form>
         </Box>
       </Modal>
-    </div>
+
+      {/* ZakazPrinyat modal */}
+      <ZakazPrinyat open={zakazOpen} onClose={() => setZakazOpen(false)} />
+    </>
   );
 }
