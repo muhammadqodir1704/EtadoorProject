@@ -19,7 +19,7 @@ const Footer = () => {
     <div className="w-full">
       <div className="container mx-auto flex justify-between mt-10 px-4 lg:px-36">
         <ul className="mt-7 space-y-4 text-sm">
-          <li className="flex items-center">
+          <li className="flex items-center text-xl">
             <button
               className=" bg-amber-700 p-2"
               style={{
@@ -29,7 +29,7 @@ const Footer = () => {
             </button>
             <p className="ms-2">etadoor@yandex.ru</p>
           </li>
-          <li className="flex items-center">
+          <li className="flex items-center text-xl">
             <button
               className=" bg-amber-700 p-2"
               style={{
@@ -39,7 +39,7 @@ const Footer = () => {
             </button>
             <p className="ms-2">+7 499 375 77 65</p>
           </li>
-          <li className="flex items-start">
+          <li className="flex items-start text-xl">
             <button
               className=" bg-amber-700 p-2"
               style={{
@@ -53,7 +53,7 @@ const Footer = () => {
             </div>
           </li>
         </ul>
-        <ul className="ms-10 text-sm space-y-2">
+        <ul className="ms-10 space-y-2 text-xl">
           <li className="font-semibold">Продукция:</li>
           <li>Каталог дверей</li>
           <li>Фурнитура</li>
@@ -61,7 +61,7 @@ const Footer = () => {
           <li>Галерея</li>
           <li>Выбор цвета</li>
         </ul>
-        <ul className="ms-10 text-sm space-y-2">
+        <ul className="ms-10 text-xl   space-y-2">
           <li className="font-semibold">Информация:</li>
           <li>Доставка и оплата</li>
           <li>Гарантии и возврат</li>
@@ -109,59 +109,44 @@ const Footer = () => {
       </div>
       <div className="container mx-auto flex gap-4 mt-8 lg:px-36">
         <button
-          className=" bg-amber-700 p-2"
-          style={{
-            borderRadius: "50%",
-          }}>
-          <MdCall className=" text-white" />
+          className="bg-amber-700 p-2"
+          style={{ borderRadius: "50%" }}
+          onClick={() => window.open("https://t.me/LS2414", "_blank")}>
+          <BsTelegram className="text-white text-2xl" />
         </button>
         <button
-          className=" bg-amber-700 p-2"
-          style={{
-            borderRadius: "50%",
-          }}>
-          <BiSolidPhoneCall className=" text-white" />
+          className="bg-amber-700 p-2"
+          style={{ borderRadius: "50%" }}
+          onClick={() => window.open("https://www.whatsapp.com/", "_blank")}>
+          <FaVk className=" text-white text-2xl" />
         </button>
         <button
-          className=" bg-amber-700 p-2"
-          style={{
-            borderRadius: "50%",
-          }}>
-          <BsTelegram className=" text-white" />
+          className="bg-amber-700 p-2"
+          style={{ borderRadius: "50%" }}
+          onClick={() => window.open("https://www.youtube.com/", "_blank")}>
+          <FaYoutube className=" text-white text-2xl" />
         </button>
         <button
-          className=" bg-amber-700 p-2"
-          style={{
-            borderRadius: "50%",
-          }}>
-          <FaVk className=" text-white" />
+          className="bg-amber-700 p-2"
+          style={{ borderRadius: "50%" }}
+          onClick={() =>
+            window.open("https://www.instagram.com/kamol1dd1nov1c", "_blank")
+          }>
+          <FaInstagram className="text-white text-2xl" />
         </button>
         <button
-          className=" bg-amber-700 p-2"
-          style={{
-            borderRadius: "50%",
-          }}>
-          <FaYoutube className=" text-white" />
-        </button>
-        <button
-          className=" bg-amber-700 p-2"
-          style={{
-            borderRadius: "50%",
-          }}>
-          <FaInstagram className=" text-white" />
-        </button>
-        <button
-          className=" bg-amber-700 p-2"
-          style={{
-            borderRadius: "50%",
-          }}>
-          <FaFacebookF className=" text-white" />
+          className="bg-amber-700 p-2"
+          style={{ borderRadius: "50%" }}
+          onClick={() =>
+            window.open("https://www.facebook.com/?locale=ru_RU", "_blank")
+          }>
+          <FaFacebookF className=" text-white text-2xl" />
         </button>
       </div>
       <div className="container mx-auto mt-10 flex gap-4 lg:px-36">
         <a
           href="https://yandex.uz/"
-          className="border border-black px-9 py-2 font-bold">
+          className="border border-black px-9 py-2 font-bold text-2xl">
           <span className="text-red-600">Я</span>ндекс
         </a>
 
@@ -174,7 +159,7 @@ const Footer = () => {
 
         <a
           href="https://yandex.uz/"
-          className="border border-black px-9 py-2 font-bold">
+          className="border border-black px-9 py-2 font-bold text-2xl">
           <span className="text-red-600">Я</span>ндекс
         </a>
 
@@ -187,7 +172,7 @@ const Footer = () => {
 
         <a
           href="https://yandex.uz/"
-          className="border border-black px-9 py-2 font-bold">
+          className="border border-black px-9 py-2 font-bold text-2xl">
           <span className="text-red-600">Я</span>ндекс
         </a>
       </div>
