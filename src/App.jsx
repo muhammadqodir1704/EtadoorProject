@@ -18,7 +18,6 @@ import Pagonaj from "./pages/Pagonaj";
 import Sotrudnichat from "./pages/Sotrudnichat";
 import DetailPage from "./components/DetailPage";
 import Okampani from "./pages/Okampani";
-import ScrollToTopButton from "./components/ScrollTopButton";
 import "./App.css";
 
 const router = createBrowserRouter([
@@ -37,7 +36,6 @@ const router = createBrowserRouter([
             <Input />
             <EtadoorImg />
             <Dverxiy />
-            <ScrollToTopButton />
           </>
         ),
       },
@@ -72,7 +70,12 @@ const router = createBrowserRouter([
       {
         path: "detailProducts/:id",
         element: <DetailPage />,
+
       },
+      // {
+      //   path: "chatBot",
+      //   element: <ChatBot />,
+      // },
       {
         path: "*",
         element: <div>404: Страница не найдена</div>,
