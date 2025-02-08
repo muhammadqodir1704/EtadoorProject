@@ -31,104 +31,77 @@ const Kontakti = () => {
           <div className="flex-1">
             <h2 className="text-base font-semibold">Офис г. Москва</h2>
             <ul className="mt-7 space-y-4 text-sm text-gray-800">
-              <li className="flex items-center">
+              <li
+                className="flex items-center cursor-pointer text-xl"
+                onClick={() =>
+                  (window.location.href =
+                    "https://www.google.com/maps/@41.309534,69.230092,15z?hl=en&entry=ttu&g_ep=EgoyMDI1MDIwNS4xIKXMDSoASAFQAw%3D%3D")
+                } // URL ni o'zgartiring
+              >
                 <button
-                  className=" bg-amber-700 p-2"
-                  style={{
-                    borderRadius: "50%",
-                  }}>
-                  <TbMapPin className=" text-white" />
+                  className="bg-amber-700 p-2"
+                  style={{ borderRadius: "50%" }}>
+                  <TbMapPin className="text-white" />
                 </button>
-                <p className="ms-2 ">г. Москва, Красная площадь дом 1</p>
+                <p className="ms-2">+998 (93)263 09 05</p>
               </li>
-              <li className="flex items-center">
+              <li className="flex items-center text-xl">
                 <button
                   className=" bg-amber-700 p-2"
                   style={{
                     borderRadius: "50%",
                   }}>
-                  <FiPhoneCall className=" text-white" />
+                  <FiPhoneCall
+                    onClick={() =>
+                      window.open(
+                        "https://www.facebook.com/?locale=ru_RU",
+                        "_blank"
+                      )
+                    }
+                    className=" text-white"
+                  />
                 </button>
-                <p className="ms-2">+7 499 375 77 65</p>
+                <p className="ms-2">+998 (50) 100 24 14</p>
               </li>
-              <li className="flex items-center">
+              <li className="flex items-center text-xl">
                 <button
-                  className=" bg-amber-700 p-2"
-                  style={{
-                    borderRadius: "50%",
-                  }}>
-                  <CiMail className=" text-white" />
+                  className="bg-amber-700 p-2"
+                  style={{ borderRadius: "50%" }}
+                  onClick={() => window.open("https://gmail.com", "_blank")}>
+                  <CiMail className="text-white" />
                 </button>
-                <p className="ms-2">etadoor@yandex.ru</p>
+                <p className="ms-2">lutfiddinovsardor</p>@gmail.com
               </li>
-              <li className="flex items-center">
+              <li className="flex items-center text-xl">
                 <button
                   className=" bg-amber-700 p-2"
                   style={{
                     borderRadius: "50%",
-                  }}>
+                  }}
+                  onClick={() =>
+                    window.open(
+                      "https://nim.uz/mijozlar-uchun/aniqvaqt/",
+                      "_blank"
+                    )
+                  }>
                   <FaRegClock className=" text-white" />
                 </button>
                 <p className="ms-2">
                   ПН-ПТ с 9.00 до 19.00, СБ с 10.00 до 18.00
                 </p>
               </li>
+              <li className="flex items-center text-xl">
+                <button
+                  className="bg-amber-700 p-2"
+                  style={{ borderRadius: "50%" }}
+                  onClick={() =>
+                    window.open("https://t.me/etadoor_bot", "_blank")
+                  }>
+                  <BsTelegram className="text-white" />
+                </button>
+                <p className="ms-2">User</p>
+              </li>
             </ul>
-            <div className="flex items-center mt-12 gap-4 text-sm">
-              <p>Связаться с нами:</p>
-              <button
-                className=" bg-amber-700 p-2"
-                style={{
-                  borderRadius: "50%",
-                }}>
-                <MdCall className=" text-white" />
-              </button>
-              <button
-                className=" bg-amber-700 p-2"
-                style={{
-                  borderRadius: "50%",
-                }}>
-                <BiSolidPhoneCall className=" text-white" />
-              </button>
-              <button
-                className=" bg-amber-700 p-2"
-                style={{
-                  borderRadius: "50%",
-                }}>
-                <BsTelegram className=" text-white" />
-              </button>
-            </div>
-            <div className="flex items-center mt-10 gap-4 text-sm">
-              <p>Мы в соц.сетях:</p>
-              <button
-                className=" bg-amber-700 p-2"
-                style={{
-                  borderRadius: "50%",
-                }}>
-                <FaVk className=" text-white" />
-              </button>
-              <button
-                className=" bg-amber-700 p-2"
-                style={{
-                  borderRadius: "50%",
-                }}>
-                <FaYoutube className=" text-white" />
-              </button>
-              <button
-                className=" bg-amber-700 p-2"
-                style={{
-                  borderRadius: "50%",
-                }}>
-                <FaInstagram className=" text-white" />
-              </button>
-              <button
-                className=" bg-amber-700 p-2"
-                style={{
-                  borderRadius: "50%",
-                }}>
-                <FaFacebookF className=" text-white" />
-              </button>
-            </div>
           </div>
           <div className="flex-1">
             <iframe
