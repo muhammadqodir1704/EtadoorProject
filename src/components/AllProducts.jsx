@@ -36,9 +36,6 @@ const AllProducts = () => {
         }
     };
 
-
-
-
     const ProductCard = ({ product }) => (
         <NavLink to={`/detailProducts/${product.id}`}>
             <div className="w-[330px] h-[483px] bg-white  hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col">

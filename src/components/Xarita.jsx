@@ -90,9 +90,8 @@ const Xarita = () => {
           height="440"
           allowFullScreen
           loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
           title="Bizning manzil"
-          className="rounded-lg shadow-md"></iframe>
+          class="rounded-lg shadow-md"></iframe>
       </div>
       <div className="flex-1">
         <h1

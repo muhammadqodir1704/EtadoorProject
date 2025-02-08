@@ -58,44 +58,37 @@ const Filter = () => {
     "Двухстворчатая",
     "Маятниковая",
     "Раздвижная",
-  ]
-  const Akno = [
-    "Нет",
-    "С окном",
-    "С иллюминатором",
-    "С передаточным окном"
-  ]
+  ];
+  const Akno = ["Нет", "С окном", "С иллюминатором", "С передаточным окном"];
   const Karobka = [
     "Маятниковая ALU",
     "Маятниковая деревянная",
     "ALU",
     "ДПК",
     "Нет,",
-  ]
-  const Furnitura = [
-    "Да",
-    "Нет",
-  ]
+  ];
+  const Furnitura = ["Да", "Нет"];
 
   const handleChange = (setter) => (event) => {
     const {
       target: { value },
     } = event;
-    setter(typeof value === 'string' ? value.split(',') : value);
+    setter(typeof value === "string" ? value.split(",") : value);
   };
   return (
     <div style={{ backgroundColor: "#F9F9F9" }}>
-      <div className="container mx-auto p-6 min-h-screen rounded-lg">
+      <div className="container mx-auto p-6  rounded-lg">
         <h2
           style={{ fontSize: 34, fontWeight: 700 }}
-          className=" text-center mb-8 font-noto-sans-georgian"
-        >
+          className=" text-center mb-8 font-noto-sans-georgian">
           Подберите свою дверь
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-7 mb-8 ">
           {/* First Select Option  */}
           <FormControl sx={{ m: 1, width: 450, height: 45 }}>
-            <InputLabel id="tags-select-label">Где будет использоваться</InputLabel>
+            <InputLabel id="tags-select-label">
+              Где будет использоваться
+            </InputLabel>
             <Select
               labelId="tags-select-label"
               multiple
@@ -103,8 +96,7 @@ const Filter = () => {
               onChange={handleChange(setFirstSelect)}
               input={<OutlinedInput label="Где будет использоваться" />}
               renderValue={(selected) => selected.join(", ")}
-              MenuProps={MenuProps}
-            >
+              MenuProps={MenuProps}>
               {GdeBudet.map((option) => (
                 <MenuItem key={option} value={option}>
                   <Checkbox checked={firstSelect.includes(option)} />
@@ -124,8 +116,7 @@ const Filter = () => {
               onChange={handleChange(setSecondSelect)}
               input={<OutlinedInput label="Тип двери" />}
               renderValue={(selected) => selected.join(", ")}
-              MenuProps={MenuProps}
-            >
+              MenuProps={MenuProps}>
               {TipDveri.map((option) => (
                 <MenuItem key={option} value={option}>
                   <Checkbox checked={secondSelect.includes(option)} />
@@ -155,20 +146,17 @@ const Filter = () => {
               onChange={handleChange(setFourthSelect)}
               input={<OutlinedInput label="Окно" />}
               renderValue={(selected) => selected.join(", ")}
-              MenuProps={
-                {
-                  anchorOrigin: {
-                    vertical: "top",
-                    horizontal: "left",
-                  },
-                  transformOrigin: {
-                    vertical: "bottom",
-                    horizontal: "left",
-                  },
-                  getContentAnchorEl: null, // Anchordan foydalanishni o'chirish
-                }
-              }
-            >
+              MenuProps={{
+                anchorOrigin: {
+                  vertical: "top",
+                  horizontal: "left",
+                },
+                transformOrigin: {
+                  vertical: "bottom",
+                  horizontal: "left",
+                },
+                getContentAnchorEl: null, // Anchordan foydalanishni o'chirish
+              }}>
               {Akno.map((option) => (
                 <MenuItem key={option} value={option}>
                   <Checkbox checked={fourthSelect.includes(option)} />
@@ -186,20 +174,17 @@ const Filter = () => {
               onChange={handleChange(setSixthSelect)}
               input={<OutlinedInput label="Коробка" />}
               renderValue={(selected) => selected.join(", ")}
-              MenuProps={
-                {
-                  anchorOrigin: {
-                    vertical: "top",
-                    horizontal: "left",
-                  },
-                  transformOrigin: {
-                    vertical: "bottom",
-                    horizontal: "left",
-                  },
-                  getContentAnchorEl: null, // Anchordan foydalanishni o'chirish
-                }
-              }
-            >
+              MenuProps={{
+                anchorOrigin: {
+                  vertical: "top",
+                  horizontal: "left",
+                },
+                transformOrigin: {
+                  vertical: "bottom",
+                  horizontal: "left",
+                },
+                getContentAnchorEl: null, // Anchordan foydalanishni o'chirish
+              }}>
               {Karobka.map((option) => (
                 <MenuItem key={option} value={option}>
                   <Checkbox checked={fifthSelect.includes(option)} />
@@ -217,20 +202,17 @@ const Filter = () => {
               onChange={handleChange(setFifthSelect)}
               input={<OutlinedInput label="Фурнитура" />}
               renderValue={(selected) => selected.join(", ")}
-              MenuProps={
-                {
-                  anchorOrigin: {
-                    vertical: "top",
-                    horizontal: "left",
-                  },
-                  transformOrigin: {
-                    vertical: "bottom",
-                    horizontal: "left",
-                  },
-                  getContentAnchorEl: null, // Anchordan foydalanishni o'chirish
-                }
-              }
-            >
+              MenuProps={{
+                anchorOrigin: {
+                  vertical: "top",
+                  horizontal: "left",
+                },
+                transformOrigin: {
+                  vertical: "bottom",
+                  horizontal: "left",
+                },
+                getContentAnchorEl: null, // Anchordan foydalanishni o'chirish
+              }}>
               {Furnitura.map((option) => (
                 <MenuItem key={option} value={option}>
                   <Checkbox checked={fifthSelect.includes(option)} />
@@ -239,12 +221,10 @@ const Filter = () => {
               ))}
             </Select>
           </FormControl>
-
         </div>
         <div
           style={{ gap: 50, position: "relative" }}
-          className=" mb-8 flex justify-center"
-        >
+          className=" mb-8 flex justify-center">
           <div>
             <img style={{ width: 375, height: 375 }} src={ChoosenImg} alt="" />
           </div>
@@ -253,36 +233,28 @@ const Filter = () => {
             <div className="flex gap-4 items-center mr-6">
               <button
                 style={{ width: 80, height: 80 }}
-                className=" bg-red-400 rounded-full border-2 border-gray-300"
-              ></button>
+                className=" bg-red-400 rounded-full border-2 border-gray-300"></button>
               <button
                 style={{ width: 80, height: 80 }}
-                className=" bg-red-400 rounded-full border-2 border-gray-300"
-              ></button>
+                className=" bg-red-400 rounded-full border-2 border-gray-300"></button>
               <button
                 style={{ width: 80, height: 80 }}
-                className=" bg-red-400 rounded-full border-2 border-gray-300"
-              ></button>
+                className=" bg-red-400 rounded-full border-2 border-gray-300"></button>
               <button
                 style={{ width: 80, height: 80 }}
-                className=" bg-red-400 rounded-full border-2 border-gray-300"
-              ></button>
+                className=" bg-red-400 rounded-full border-2 border-gray-300"></button>
               <button
                 style={{ width: 80, height: 80 }}
-                className=" bg-red-400 rounded-full border-2 border-gray-300"
-              ></button>
+                className=" bg-red-400 rounded-full border-2 border-gray-300"></button>
               <button
                 style={{ width: 80, height: 80 }}
-                className=" bg-red-400 rounded-full border-2 border-gray-300"
-              ></button>
+                className=" bg-red-400 rounded-full border-2 border-gray-300"></button>
               <button
                 style={{ width: 80, height: 80 }}
-                className=" bg-red-400 rounded-full border-2 border-gray-300"
-              ></button>
+                className=" bg-red-400 rounded-full border-2 border-gray-300"></button>
               <button
                 style={{ width: 80, height: 80 }}
-                className=" bg-red-400 rounded-full border-2 border-gray-300"
-              ></button>
+                className=" bg-red-400 rounded-full border-2 border-gray-300"></button>
             </div>
 
             <div style={{ width: 826, height: 130 }} className="mb-8">
@@ -329,7 +301,7 @@ const Filter = () => {
           </div>
         </div>
 
-        <div className="flex justify-center">
+        {/* <div className="flex justify-center">
           <div style={{ width: 1052, height: 152 }}>
             <div className="mb-8 grid grid-cols-1 md:grid-cols-3 gap-4">
               <input
@@ -351,18 +323,16 @@ const Filter = () => {
             <textarea
               placeholder="Комментарий"
               className="w-full p-2 border border-gray-300 rounded mb-4"
-              rows="4"
-            ></textarea>
+              rows="4"></textarea>
             <div className="flex justify-center">
               <button
                 style={{ width: 302, height: 65, fontSize: 32 }}
-                className=" py-3 bg-orange-500 text-white rounded hover:bg-orange-600"
-              >
+                className=" py-3 bg-orange-500 text-white rounded hover:bg-orange-600">
                 Отправить заявку
               </button>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
