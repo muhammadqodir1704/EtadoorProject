@@ -17,7 +17,7 @@ import { Link } from "react-router-dom";
 const Kontakti = () => {
   return (
     <div className="container mx-auto p-6 rounded-lg">
-      <Link to={"/"}>Главная</Link>
+      <Link to={"/"}>Главная | </Link>
       <Link to={"/kontakti"} className="text-stone-500">
         Контакты
       </Link>
@@ -36,7 +36,7 @@ const Kontakti = () => {
                 onClick={() =>
                   (window.location.href =
                     "https://www.google.com/maps/@41.309534,69.230092,15z?hl=en&entry=ttu&g_ep=EgoyMDI1MDIwNS4xIKXMDSoASAFQAw%3D%3D")
-                } // URL ni o'zgartiring
+                } 
               >
                 <button
                   className="bg-amber-700 p-2"

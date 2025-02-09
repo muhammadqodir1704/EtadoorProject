@@ -3,9 +3,6 @@ import Frame1 from "../assets/Frame1.png";
 import Frame2 from "../assets/Frame2.png";
 import Frame3 from "../assets/Frame3.png";
 import Frame4 from "../assets/Frame4.png";
-import Frame5 from "../assets/Frame5.png";
-import Frame6 from "../assets/Frame6.png";
-import Frame7 from "../assets/Frame7.png";
 import Dverxiy from "../components/Dverxiy";
 import { Link } from "react-router-dom";
 import EtadoorImg from "../components/EtadoorImg";
@@ -26,7 +23,7 @@ const Sotrudnichat = () => {
             Сотрудничать
           </Link>
         </div>
-        <h1 className="m-3 mb-10 text-2xl font-bold text-black md:text-4xl">
+        <h1 className="m-3 mb-10 text-2xl font-bold text-black md:text-4xl font-noto-sans-georgian">
           Сотрудничать
         </h1>
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
