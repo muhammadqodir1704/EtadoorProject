@@ -78,6 +78,10 @@ const router = createBrowserRouter([
         element: <Sertifikati />,
       },
       {
+        path: "allProducts",
+        element: <AllProducts />,
+      },
+      {
         path: "*",
         element: <div>404: Страница не найдена</div>,
       },

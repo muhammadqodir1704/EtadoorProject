@@ -6,14 +6,32 @@ import Frame4 from "../assets/Frame4.png";
 import Dverxiy from "../components/Dverxiy";
 import { Link } from "react-router-dom";
 import EtadoorImg from "../components/EtadoorImg";
+import { p } from "framer-motion/client";
 
 const Sotrudnichat = () => {
   const items = [
-    { img: Frame1, text: "Большой склад  готовой продукции" },
-    { img: Frame2, text: "Широкий ассортимент продукции" },
-    { img: Frame3, text: "Весь товар сертифицирован" , path: "/sertifikati" },
-    { img: Frame4, text: "Доставка по всей территории РФ"  , },
+    {
+      img: Frame1,
+      text: "Большой склад  готовой продукции",
+      path: "/allProducts" 
+    },
+    {
+      img: Frame2,
+      text: "Широкий ассортимент продукции",
+      path: "/allProducts"
+    },
+    {
+      img: Frame3,
+      text: "Весь товар сертифицирован",
+      path: "/sertifikati"
+    },
+    {
+      img: Frame4,
+      text: "Доставка по всей территории РФ",
+      path: "/dostavka" 
+    },
   ];
+
   return (
     <>
       <div className="container p-6 mx-auto">
@@ -28,21 +46,20 @@ const Sotrudnichat = () => {
         </h1>
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {items.map((item, index) => (
-            <Link to={item.path}>
-            <div
-              key={index}
-              className="flex flex-col items-center gap-4 p-6  cursor-pointer">
-              <img
-                src={item.img}
-                alt=""
-                className="w-20 h-20 duration-200 ease-in hover:scale-105"
-              />
-              <p className="text-lg text-center text-black md:text-xl w-[200px]">
-                {item.text}
-              </p>
-            </div>
+            <Link to={item.path} key={index}>
+              <div className="flex flex-col items-center gap-4 p-6 cursor-pointer">
+                <img
+                  src={item.img}
+                  alt=""
+                  className="w-20 h-20 duration-200 ease-in hover:scale-105"
+                />
+                <p className="text-lg text-center text-black md:text-xl w-[200px]">
+                  {item.text}
+                </p>
+              </div>
             </Link>
           ))}
+
         </div>
       </div>
       <EtadoorImg />
