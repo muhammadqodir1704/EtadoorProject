@@ -271,9 +271,9 @@ const DetailPage = () => {
                 color: "#FF3C38",
                 color: "#000",
               }}
-              className="font-circe"
+              className="font-circe text-center"
             >
-              {product.finalPrice} руб.
+              {product.finalPrice} <span style={{fontWeight:400 , fontSize:20}}>руб.</span>
             </p>
             <div className="flex items-center">
               <button
