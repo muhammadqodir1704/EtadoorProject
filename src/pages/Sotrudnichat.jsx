@@ -17,12 +17,6 @@ const Sotrudnichat = () => {
     { img: Frame3, text: "Весь товар сертифицирован" },
     { img: Frame4, text: "Доставка по всей территории РФ" },
   ];
-  const items2 = [
-    { img: Frame5, text: "Большой склад готовой продукции" },
-    { img: Frame6, text: "Большой склад готовой продукции" },
-    { img: Frame7, text: "Большой склад готовой продукции" },
-  ];
-
   return (
     <>
       <div className="container p-6 mx-auto">
@@ -39,7 +33,7 @@ const Sotrudnichat = () => {
           {items.map((item, index) => (
             <div
               key={index}
-              className="flex flex-col items-center gap-4 p-6 transition-shadow duration-300 cursor-pointer">
+              className="flex flex-col items-center gap-4 p-6  cursor-pointer">
               <img
                 src={item.img}
                 alt=""
@@ -51,23 +45,6 @@ const Sotrudnichat = () => {
             </div>
           ))}
         </div>
-        <div className="grid grid-cols-1 pl-64 sm:grid-cols-2 lg:grid-cols-4 ">
-          {items2.map((item, index) => (
-            <div
-              key={index}
-              className="flex flex-col items-center gap-4 p-6 transition-shadow duration-300">
-              <img
-                src={item.img}
-                alt=""
-                className="w-20 h-20 duration-200 ease-in hover:scale-105"
-              />
-              <p className="text-lg text-center text-black md:text-xl w-[200px]">
-                {item.text}
-              </p>
-            </div>
-          ))}
-        </div>
-        {/* Dverxi img */}
       </div>
       <EtadoorImg />
       <Dverxiy />
