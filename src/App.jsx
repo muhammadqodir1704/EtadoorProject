@@ -4,12 +4,11 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RootLayout from "./Layout/RootLayout";
 import MainPage from "./components/MainPage";
 import AllProducts from "./components/AllProducts";
-import Filter from "./components/Filter";
+// import Filter from "./components/Filter";
 import Rasm from "./components/Rasm";
 import Input from "./components/Input";
 import EtadoorImg from "./components/EtadoorImg";
 import Dverxiy from "./components/Dverxiy";
-import Xarita from "./components/Xarita";
 import KatalogDverey from "./components/KatalogDverey";
 import Furnitura from "./pages/Furnitura";
 import GdeKupit from "./pages/GdeKupit";
@@ -31,7 +30,7 @@ const router = createBrowserRouter([
           <>
             <MainPage />
             <AllProducts />
-            <Filter />
+            {/* <Filter /> */}
             <Rasm />
             <Input />
             <EtadoorImg />

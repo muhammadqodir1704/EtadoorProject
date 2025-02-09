@@ -17,21 +17,18 @@ const style = {
 };
 
 export default function Zakaz({ open, handleClose, productData }) {
-const initialFormState = {
-  itemId: productData?.id || "", 
-  itemType: "DOOR",
-  customerName: "dwdad",
-  phoneNumber: "", 
-  orderType: "FULL_SET",
-  email: "",
-  comment: "",
-  deliveryAddress: "dsdsdsds", //
-  deliveryDate: "",
-  preferredDeliveryTime: new Date().toISOString(), // Hozirgi vaqt
-};
+  const initialFormState = {
+    itemId: 1,
+    itemType: "DOOR",
+    email: "",
+    customerName: "",
+    phoneNumber: "",
+    orderType: "FULL_SET",
+    comment: "",
+  };
 
   const [formData, setFormData] = React.useState(initialFormState);
-  // const [zakazOpen, setZakazOpen] = React.useState(false);
+  const [zakazOpen, setZakazOpen] = React.useState(false);
   const [isLoading, setIsLoading] = React.useState(false);
 
   const handleChange = (e) => {
@@ -41,17 +38,18 @@ const initialFormState = {
     e.preventDefault();
     setIsLoading(true);
     console.log("Yuborilayotgan ma'lumot:", formData);
-  
+
     try {
       const response = await axios.post(
         "https://etadoor.up.railway.app/api/v1/additional/checkout",
         formData
       );
       console.log("Success:", response.data);
-  
+
       setFormData(initialFormState);
       handleClose();
-  
+      setZakazOpen(true);
+
       setTimeout(() => {
         setZakazOpen(false);
       }, 3000);
@@ -151,9 +149,10 @@ const initialFormState = {
           </Typography>
 
           <div className="mt-3 flex flex-col items-center">
+          <form onSubmit={handleSubmit}>
             <input
-              name="customerName" // name attributi qo'shish kerak
-              value={formData.customerName} // value qo'shish kerak
+              name="customerName"
+              value={formData.customerName} 
               onChange={handleChange}
               style={{ width: 450, height: 45 }}
               type="text"
@@ -180,16 +179,6 @@ const initialFormState = {
                 className=" p-2 mt-4 w-full text-center bg-white "
                 required
               />
-                 <input
-                name="deliveryAddress"
-                value={formData.deliveryAddress}
-                onChange={handleChange}
-                style={{ width: 220, height: 45 }}
-                type="text"
-                placeholder="deliveryAdress*"
-                className=" p-2 mt-4 w-full text-center bg-white "
-                required
-              />
             </div>
             <textarea
               name="comment"
@@ -208,16 +197,23 @@ const initialFormState = {
                 конфеденциальнолсти
               </p>
               <button
-                disabled={isLoading}
-                onClick={handleSubmit}
-                className="bg-custom-red text-white font-circe"
+                type="submit"
+                className="bg-custom-red text-white font-circe flex justify-center items-center"
+                style={{ width: 182, height: 39, fontSize: 14, fontWeight: 700 }}
+                disabled={isLoading} 
               >
-                {isLoading ? "Yuborilmoqda..." : "Отправить заявку"}
+                {isLoading ? (
+                  <span className="loader"></span> 
+                ) : (
+                  "Отправить заявку"
+                )}
               </button>
             </div>
+           </form>
           </div>
         </Box>
       </Modal>
+            <ZakazSecondPrin open={zakazOpen} onClose={() => setZakazOpen(false)} />
     </div>
   );
 }
