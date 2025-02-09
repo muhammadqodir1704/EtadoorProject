@@ -16,7 +16,7 @@ const style = {
   p: 4,
 };
 
-export default function ZakazPrinyat({ open, onClose }) {
+export default function ZakazSecondPrin({ open, onClose }) {
   return (
     <div>
       <Modal
@@ -32,7 +32,7 @@ export default function ZakazPrinyat({ open, onClose }) {
             id="modal-modal-title"
             variant="h6"
           >
-            Ваше обращение отправлено{" "} <GiConfirmed style={{ fontSize:38 ,color: '#199719' }}/>
+            Ваш заказ принят{" "} <GiConfirmed style={{ fontSize:38 ,color: '#199719' }}/>
 
           </Typography>
           <Typography
