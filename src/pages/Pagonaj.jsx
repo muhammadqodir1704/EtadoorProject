@@ -133,7 +133,7 @@ const Pagonaj = () => {
         </Link>
         <span className="text-base"> Погонаж</span>
       </div>
-      <h1 style={{ fontWeight: 700, fontSize: 34 }} className="px-10 mb-6 text-2xl font-encode-sans">Погонаж</h1>
+      <h1 style={{ fontWeight: 700, fontSize: 34 }} className="px-10 mb-6 text-2xl font-noto-sans-georgian">Погонаж</h1>
       <div className="grid grid-cols-1 gap-6 px-10 mb-6 cursor-pointer sm:grid-cols-3 md:grid-cols-4">
         {columns.map((item, index) => (
           <div

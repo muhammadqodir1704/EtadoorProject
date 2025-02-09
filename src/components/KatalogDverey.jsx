@@ -40,7 +40,7 @@ const KatalogDverey = () => {
           Каталог дверей
         </Link>
       </div>
-      <h1 style={{ fontSize: 34, fontWeight: 700 }} className=" ms-6 mb-4">
+      <h1 style={{ fontSize: 34, fontWeight: 700 }} className=" ms-6 mb-4 font-noto-sans-georgian">
         Каталог дверей
       </h1>
       <div className=" grid grid-cols-4 gap-5 justify-items-center">
