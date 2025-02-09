@@ -38,7 +38,7 @@ export default function ZaprositModal({ open, handleClose }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsLoading(true); // Loaderni yoqish
+    setIsLoading(true);
     console.log("Yuborilayotgan ma'lumot:", formData);
 
     try {
@@ -117,10 +117,10 @@ export default function ZaprositModal({ open, handleClose }) {
                 type="submit"
                 className="bg-custom-red text-white font-circe flex justify-center items-center"
                 style={{ width: 182, height: 39, fontSize: 14, fontWeight: 700 }}
-                disabled={isLoading} // Tugma disable holatga keladi
+                disabled={isLoading} 
               >
                 {isLoading ? (
-                  <span className="loader"></span> // Agar loader bo'lsa, tugma o'rniga aylanadi
+                  <span className="loader"></span> 
                 ) : (
                   "Отправить заявку"
                 )}
@@ -129,8 +129,6 @@ export default function ZaprositModal({ open, handleClose }) {
           </form>
         </Box>
       </Modal>
-
-      {/* ZakazPrinyat modal */}
       <ZakazPrinyat open={zakazOpen} onClose={() => setZakazOpen(false)} />
     </>
   );

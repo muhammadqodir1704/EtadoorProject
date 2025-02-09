@@ -37,41 +37,41 @@ const ChatBot = () => {
     }
   };
 
-  const fetchMessages = async () => {
-    try {
-      const response = await fetch(
-        "https://api.telegram.org/bot7769306403:AAHB59RN5iUFnz5r3N72UDFKEeyAFxdil0w/getUpdates"
-      );
-      const data = await response.json();
+  // const fetchMessages = async () => {
+  //   try {
+  //     const response = await fetch(
+  //       "https://api.telegram.org/bot7769306403:AAHB59RN5iUFnz5r3N72UDFKEeyAFxdil0w/getUpdates"
+  //     );
+  //     const data = await response.json();
 
-      if (data.ok) {
-        const newMessages = data.result
-          .filter((update) => update.message?.text)
-          .filter(
-            (update) =>
-              lastMessageId === null || update.message.message_id > lastMessageId
-          )
-          .map((update) => ({
-            text: update.message.text,
-            from: update.message.from.first_name || "Noma",
-            messageId: update.message.message_id,
-          }));
+  //     if (data.ok) {
+  //       const newMessages = data.result
+  //         .filter((update) => update.message?.text)
+  //         .filter(
+  //           (update) =>
+  //             lastMessageId === null || update.message.message_id > lastMessageId
+  //         )
+  //         .map((update) => ({
+  //           text: update.message.text,
+  //           from: update.message.from.first_name || "Noma",
+  //           messageId: update.message.message_id,
+  //         }));
 
-        if (newMessages.length > 0) {
-          setMessages((prevMessages) => [...prevMessages, ...newMessages]);
-          setLastMessageId(newMessages[newMessages.length - 1].messageId);
-        }
-      }
-    } catch (error) {
-      console.error("Xato:", error);
-    } finally {
-      setCount((v) => v + 1);
-    }
-  };
+  //       if (newMessages.length > 0) {
+  //         setMessages((prevMessages) => [...prevMessages, ...newMessages]);
+  //         setLastMessageId(newMessages[newMessages.length - 1].messageId);
+  //       }
+  //     }
+  //   } catch (error) {
+  //     console.error("Xato:", error);
+  //   } finally {
+  //     setCount((v) => v + 1);
+  //   }
+  // };
 
-  useEffect(() => {
-    setTimeout(fetchMessages, 2000);
-  }, [count]);
+  // useEffect(() => {
+  //   setTimeout(fetchMessages, 2000);
+  // }, [count]);
 
   return (
     <div className="fixed bottom-5 right-5">
