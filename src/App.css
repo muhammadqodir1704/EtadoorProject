@@ -2,13 +2,13 @@
   max-height: 24rem; /* 384px */
   overflow-y: auto;
   scrollbar-width: thin;
-  scrollbar-color: #FF6F55 transparent;
+  scrollbar-color: #ff6f55 transparent;
 }
 
 .scroll-container ul {
   padding: 0;
   margin: 0;
-  
+
   list-style: none;
 }
 
@@ -42,8 +42,52 @@
 
 /* LI tanlanganda qizil border chiqadi */
 .scroll-container li:hover {
-  border: 2px solid #FF6F55;
+  border: 2px solid #ff6f55;
 }
 
-/* swiper styles */
+.filter-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
 
+.filter-container h2 {
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.filter-container h3 {
+  font-size: 18px;
+  color: #444;
+  margin: 10px 0;
+}
+
+.filter-container ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 5px 10px;
+  background: #e0e0e0;
+  border-radius: 20px;
+  font-size: 14px;
+  margin: 3px;
+}
+
+.blue-badge {
+  background: #e3f2fd;
+  color: #1976d2;
+}

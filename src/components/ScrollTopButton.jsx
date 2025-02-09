@@ -6,11 +6,7 @@ const ScrollToTopButton = () => {
 
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.pageYOffset > 300) {
-        setVisible(true);
-      } else {
-        setVisible(false);
-      }
+      setVisible(window.scrollY > 300);
     };
 
     window.addEventListener("scroll", toggleVisibility);
@@ -25,19 +21,13 @@ const ScrollToTopButton = () => {
   };
 
   return (
-    visible && (
-      <button
-      style={{
-        width: "61px",
-        height: "65px",
-        backgroundColor: "#A08961",
-      }}
-        onClick={scrollToTop}
-        className="fixed bottom-64 right-5  text-white shadow-md hover:bottom-72 transition-transform flex items-center justify-center"
-      >
-        <IoTriangle style={{ fontSize: "30px" }} />
-      </button>
-    )
+    <button
+      onClick={scrollToTop}
+      className={`fixed bottom-16 right-5 w-16 h-16 bg-[#A08961] text-white shadow-md flex items-center justify-center rounded-md transition-all duration-300 ${
+        visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
+      }`}>
+      <IoTriangle className="text-3xl" />
+    </button>
   );
 };
 

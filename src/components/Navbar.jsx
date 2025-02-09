@@ -1,10 +1,11 @@
-import React, { useState } from "react";
 import { FaWhatsapp, FaTelegramPlane } from "react-icons/fa";
 import { MdOutlinePermPhoneMsg } from "react-icons/md";
 import { CiViewList } from "react-icons/ci";
 import Logo from "../Images/Frame 3.svg";
 import ZaprositModal from "../Modal/ZaprositModal";
 import ZakazatZvanok from "../Modal/ZakazatZvanok";
+import { useState } from "react";
+
 const Navbar = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [zakazatZvanok, setZakazatZvanok] = useState(false);
@@ -40,31 +41,27 @@ const Navbar = () => {
             </p>
           </li>
           <div className="flex space-x-2">
-            <button className="px-4 py-2 text-white rounded-md bg-custom-brown">
-              <FaWhatsapp
-                onClick={() =>
-                  window.open("https://www.whatsapp.com/", "_blank")
-                }
-                style={{ fontSize: 28 }}
-              />
+            <button
+              className="px-4 py-2 text-white rounded-md bg-custom-brown"
+              onClick={() =>
+                window.open("https://www.whatsapp.com/", "_blank")
+              }>
+              <FaWhatsapp style={{ fontSize: 28 }} />
             </button>
-            <button className="px-4 py-2 text-white rounded-md bg-custom-brown">
-              <FaTelegramPlane
-                onClick={() =>
-                  window.open("https://t.me/etadoor_bot", "_blank")
-                }
-                style={{ fontSize: 28 }}
-              />
+            <button
+              className="px-4 py-2 text-white rounded-md bg-custom-brown"
+              onClick={() => window.open("https://t.me/etadoor_bot", "_blank")}>
+              <FaTelegramPlane style={{ fontSize: 28 }} />
             </button>
           </div>
         </ul>
         <div className="flex space-x-4">
           <button
             onClick={() => setZakazatZvanok(true)}
-            className="flex items-center px-4 py-2 border border-custom-red">
+            className="flex items-center px-4 py-2 border border-custom-brown hover:border-custom-red">
             <MdOutlinePermPhoneMsg
               className="text-custom-red"
-              style={{ fontSize: 28 }}
+              style={{ fontSize: 28, marginRight: 10 }}
             />
             <p
               className="font-circe"
@@ -74,8 +71,8 @@ const Navbar = () => {
           </button>
           <button
             onClick={() => setModalOpen(true)}
-            className="flex items-center px-4 py-2 text-white bg-custom-red">
-            <CiViewList style={{ fontSize: 28 }} />
+            className="flex items-center px-4 py-2 text-white bg-custom-red hover:bg-custom-brown">
+            <CiViewList style={{ fontSize: 28, marginRight: 10 }} />
             <p className="font-circe" style={{ fontSize: 14, fontWeight: 700 }}>
               Запросить прайс-лист
             </p>
@@ -83,7 +80,6 @@ const Navbar = () => {
         </div>
       </div>
       <hr className="mt-4 border-t-2 border-custom-brown" />
-
       <ZaprositModal open={modalOpen} handleClose={() => setModalOpen(false)} />
       <ZakazatZvanok
         open={zakazatZvanok}

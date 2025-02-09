@@ -15,7 +15,7 @@ const MainPage = () => {
           <h1
             style={{ fontSize: 48, fontWeight: 700 }}
             className="text-4xl font-bold font-noto-sans-georgian">
-            Влагостойкие композитные <br /> двери Etadoor
+            Влагостойкие композитные <br /> <span className="pt-12">двери Etadoor</span>
           </h1>
           <div className="flex justify-between mt-4">
             <div className="flex flex-col items-center">

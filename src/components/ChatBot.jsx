@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import { IoMdSend } from "react-icons/io";
 import { MdMessage } from "react-icons/md";
 
-
-
 const ChatBot = () => {
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([]);
@@ -37,49 +35,48 @@ const ChatBot = () => {
     }
   };
 
-  const fetchMessages = async () => {
-    try {
-      const response = await fetch(
-        "https://api.telegram.org/bot7769306403:AAHB59RN5iUFnz5r3N72UDFKEeyAFxdil0w/getUpdates"
-      );
-      const data = await response.json();
+  // const fetchMessages = async () => {
+  //   try {
+  //     const response = await fetch(
+  //       "https://api.telegram.org/bot7769306403:AAHB59RN5iUFnz5r3N72UDFKEeyAFxdil0w/getUpdates"
+  //     );
+  //     const data = await response.json();
 
-      if (data.ok) {
-        const newMessages = data.result
-          .filter((update) => update.message?.text)
-          .filter(
-            (update) =>
-              lastMessageId === null || update.message.message_id > lastMessageId
-          )
-          .map((update) => ({
-            text: update.message.text,
-            from: update.message.from.first_name || "Noma",
-            messageId: update.message.message_id,
-          }));
+  //     if (data.ok) {
+  //       const newMessages = data.result
+  //         .filter((update) => update.message?.text)
+  //         .filter(
+  //           (update) =>
+  //             lastMessageId === null || update.message.message_id > lastMessageId
+  //         )
+  //         .map((update) => ({
+  //           text: update.message.text,
+  //           from: update.message.from.first_name || "Noma",
+  //           messageId: update.message.message_id,
+  //         }));
 
-        if (newMessages.length > 0) {
-          setMessages((prevMessages) => [...prevMessages, ...newMessages]);
-          setLastMessageId(newMessages[newMessages.length - 1].messageId);
-        }
-      }
-    } catch (error) {
-      console.error("Xato:", error);
-    } finally {
-      setCount((v) => v + 1);
-    }
-  };
+  //       if (newMessages.length > 0) {
+  //         setMessages((prevMessages) => [...prevMessages, ...newMessages]);
+  //         setLastMessageId(newMessages[newMessages.length - 1].messageId);
+  //       }
+  //     }
+  //   } catch (error) {
+  //     console.error("Xato:", error);
+  //   } finally {
+  //     setCount((v) => v + 1);
+  //   }
+  // };
 
-  useEffect(() => {
-    setTimeout(fetchMessages, 2000);
-  }, [count]);
+  // useEffect(() => {
+  //   setTimeout(fetchMessages, 2000);
+  // }, [count]);
 
   return (
     <div className="fixed bottom-5 right-5">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="bg-[#3390EC] text-white p-3 rounded-full shadow-lg hover:bg-[#2884e0] transition duration-300 flex items-center"
-      >
-        <MdMessage />
+        className="bg-[#3390EC] text-white p-3 rounded-full shadow-lg hover:bg-[#2884e0] transition duration-300 flex items-center">
+        <MdMessage style={{ fontSize: "24px", marginRight: "8px" }} />
         Отправьте нам сообщение
       </button>
 
@@ -96,21 +93,21 @@ const ChatBot = () => {
             {messages.map((msg, index) => (
               <div
                 key={index}
-                className={`my-2 max-w-[80%] ${msg.from === "Siz" ? "ml-auto" : "mr-auto"
-                  }`}
-              >
+                className={`my-2 max-w-[80%] ${
+                  msg.from === "Siz" ? "ml-auto" : "mr-auto"
+                }`}>
                 <div
-                  className={`p-3 rounded-2xl ${msg.from === "Siz"
+                  className={`p-3 rounded-2xl ${
+                    msg.from === "Siz"
                       ? "bg-[#3390EC] text-white"
                       : "bg-white text-black"
-                    }`}
-                >
+                  }`}>
                   <p className="text-sm">{msg.text}</p>
                 </div>
                 <div
-                  className={`text-xs text-gray-500 mt-1 ${msg.from === "Siz" ? "text-right" : "text-left"
-                    }`}
-                >
+                  className={`text-xs text-gray-500 mt-1 ${
+                    msg.from === "Siz" ? "text-right" : "text-left"
+                  }`}>
                   {msg.from}
                 </div>
               </div>
@@ -127,8 +124,7 @@ const ChatBot = () => {
             />
             <button
               onClick={sendMessage}
-              className="ml-2 bg-[#3390EC] text-white p-2 rounded-full w-10 h-10 flex items-center justify-center hover:bg-[#2884e0]"
-            >
+              className="ml-2 bg-[#3390EC] text-white p-2 rounded-full w-10 h-10 flex items-center justify-center hover:bg-[#2884e0]">
               <IoMdSend />
             </button>
           </div>

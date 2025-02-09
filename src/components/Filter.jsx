@@ -77,7 +77,7 @@ const Filter = () => {
   };
   return (
     <div style={{ backgroundColor: "#F9F9F9" }}>
-      <div className="container mx-auto p-6  rounded-lg">
+      <div className="container mx-auto p-6 min-h-screen rounded-lg">
         <h2
           style={{ fontSize: 34, fontWeight: 700 }}
           className=" text-center mb-8 font-noto-sans-georgian">
@@ -301,7 +301,7 @@ const Filter = () => {
           </div>
         </div>
 
-        {/* <div className="flex justify-center">
+        <div className="flex justify-center">
           <div style={{ width: 1052, height: 152 }}>
             <div className="mb-8 grid grid-cols-1 md:grid-cols-3 gap-4">
               <input
@@ -332,7 +332,7 @@ const Filter = () => {
               </button>
             </div>
           </div>
-        </div> */}
+        </div>
       </div>
     </div>
   );
