@@ -11,31 +11,31 @@ const ChatBot = () => {
   const [count, setCount] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
 
-  const sendMessage = async () => {
-    if (!message) return;
+  // const sendMessage = async () => {
+  //   if (!message) return;
 
-    const newMessage = { text: message, from: "Siz", messageId: -1 };
-    setMessages((prevMessages) => [...prevMessages, newMessage]);
+  //   const newMessage = { text: message, from: "Siz", messageId: -1 };
+  //   setMessages((prevMessages) => [...prevMessages, newMessage]);
 
-    try {
-      const response = await fetch(
-        "https://api.telegram.org/bot7769306403:AAHB59RN5iUFnz5r3N72UDFKEeyAFxdil0w/sendMessage",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ chat_id: "5427747795", text: message }),
-        }
-      );
+  //   try {
+  //     const response = await fetch(
+  //       "https://api.telegram.org/bot7769306403:AAHB59RN5iUFnz5r3N72UDFKEeyAFxdil0w/sendMessage",
+  //       {
+  //         method: "POST",
+  //         headers: { "Content-Type": "application/json" },
+  //         body: JSON.stringify({ chat_id: "5427747795", text: message }),
+  //       }
+  //     );
 
-      const data = await response.json();
-      if (!data.ok) throw new Error(data.description);
+  //     const data = await response.json();
+  //     if (!data.ok) throw new Error(data.description);
 
-      console.log("Xabar yuborildi:", data);
-      setMessage("");
-    } catch (error) {
-      console.error("Xato:", error);
-    }
-  };
+  //     console.log("Xabar yuborildi:", data);
+  //     setMessage("");
+  //   } catch (error) {
+  //     console.error("Xato:", error);
+  //   }
+  // };
 
   // const fetchMessages = async () => {
   //   try {
