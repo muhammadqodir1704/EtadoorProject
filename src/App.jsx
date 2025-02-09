@@ -17,6 +17,7 @@ import Pagonaj from "./pages/Pagonaj";
 import Sotrudnichat from "./pages/Sotrudnichat";
 import DetailPage from "./components/DetailPage";
 import Okampani from "./pages/Okampani";
+import Sertifikati from "./pages/Sertifikati";
 import "./App.css";
 
 const router = createBrowserRouter([
@@ -35,6 +36,7 @@ const router = createBrowserRouter([
             <Input />
             <EtadoorImg />
             <Dverxiy />
+            <Sertifikati />
           </>
         ),
       },
@@ -71,10 +73,10 @@ const router = createBrowserRouter([
         element: <DetailPage />,
 
       },
-      // {
-      //   path: "chatBot",
-      //   element: <ChatBot />,
-      // },
+      {
+        path: "sertifikati",
+        element: <Sertifikati />,
+      },
       {
         path: "*",
         element: <div>404: Страница не найдена</div>,

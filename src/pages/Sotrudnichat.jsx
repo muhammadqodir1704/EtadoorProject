@@ -11,8 +11,8 @@ const Sotrudnichat = () => {
   const items = [
     { img: Frame1, text: "Большой склад  готовой продукции" },
     { img: Frame2, text: "Широкий ассортимент продукции" },
-    { img: Frame3, text: "Весь товар сертифицирован" },
-    { img: Frame4, text: "Доставка по всей территории РФ" },
+    { img: Frame3, text: "Весь товар сертифицирован" , path: "/sertifikati" },
+    { img: Frame4, text: "Доставка по всей территории РФ"  , },
   ];
   return (
     <>
@@ -28,6 +28,7 @@ const Sotrudnichat = () => {
         </h1>
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {items.map((item, index) => (
+            <Link to={item.path}>
             <div
               key={index}
               className="flex flex-col items-center gap-4 p-6  cursor-pointer">
@@ -40,6 +41,7 @@ const Sotrudnichat = () => {
                 {item.text}
               </p>
             </div>
+            </Link>
           ))}
         </div>
       </div>
