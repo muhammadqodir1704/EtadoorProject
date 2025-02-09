@@ -14,7 +14,6 @@ const GdeKupit = () => {
         </Link>
         </div>
       <EtadoorImg />
-
       <hr className="border-2 border-amber-700 mt-24" />
     </>
   );

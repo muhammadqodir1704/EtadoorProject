@@ -33,7 +33,7 @@ const ScrollToTopButton = () => {
         backgroundColor: "#A08961",
       }}
         onClick={scrollToTop}
-        className="fixed bottom-64 right-5  text-white shadow-md hover:bottom-72 transition-transform flex items-center justify-center"
+        className="fixed bottom-64 right-5  text-white shadow-md hover:bottom-72 transition-transform flex items-center justify-center z-10"
       >
         <IoTriangle style={{ fontSize: "30px" }} />
       </button>

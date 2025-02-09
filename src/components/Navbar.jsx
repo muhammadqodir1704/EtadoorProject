@@ -54,7 +54,7 @@ const Navbar = () => {
           </div>
         </ul>
         <div className="flex space-x-4">
-          <button 
+          {/* <button 
             onClick={() => setZakazatZvanok(true)}
             className="flex items-center px-4 py-2 border border-custom-brown hover:border-custom-red">
             <MdOutlinePermPhoneMsg 
@@ -66,7 +66,7 @@ const Navbar = () => {
               style={{ fontSize: 14, fontWeight: 700, color: "#142839" }}>
               Заказать звонок
             </p>
-          </button>
+          </button> */}
           <button
             onClick={() => setModalOpen(true)}
             className="flex items-center px-4 py-2 text-white bg-custom-red hover:bg-custom-brown">
