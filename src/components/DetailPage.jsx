@@ -206,7 +206,6 @@ const DetailPage = () => {
                 </label>
               ))}
             </div>
-            {/* swiper */}
             <Swiper
               slidesPerView={3}
               direction={direction}
@@ -279,14 +278,14 @@ const DetailPage = () => {
               <button
                 onClick={() => setOpenZakaz(true)}
                 style={{ width: 277, height: 52 }}
-                className=" bg-custom-red text-white py-3 px-6 transition-colors duration-300 font-medium"
+                className=" bg-custom-red text-white py-3 px-6 transition-colors duration-300 font-medium hover:bg-custom-brown"
               >
                 Заказать
               </button>
               <button
                onClick={() => setOpenZaprosit(true)}
                 style={{ width: 277, height: 52 }}
-                className="border border-custom-brown py-3 px-6 text-custom-black  transition-colors duration-300 font-medium ml-4"
+                className="border border-custom-brown py-3 px-6 text-custom-black  transition-colors duration-300 font-medium ml-4 hover:border-custom-red"
               >
                 Запросить прайс-лист
               </button>
