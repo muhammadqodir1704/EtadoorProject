@@ -15,9 +15,11 @@ const MainPage = () => {
           <h1
             style={{ fontSize: 48, fontWeight: 700 }}
             className="text-4xl font-bold font-noto-sans-georgian">
-            Влагостойкие композитные <br /> <span className="pt-12">двери Etadoor</span>
+            Влагостойкие композитные <br />
+            <span style={{ marginTop: '1.5rem', display: 'block' }}>двери Etadoor</span>
           </h1>
-          <div className="flex justify-between mt-4">
+
+          <div className="flex justify-between mt-16">
             <div className="flex flex-col items-center">
               <img src={Icons1} alt="" />
               <p className="mt-2">Влагостойкость</p>
