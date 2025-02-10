@@ -50,9 +50,6 @@ export default function Header() {
       alignItems="center"
       bgcolor="#fff"
       boxShadow="0px 1px 5px rgba(0, 0, 0, 0.1)"
-      position="sticky"
-      top="0"
-      zIndex="999"
     >
    <Tabs
   value={value}
@@ -66,20 +63,20 @@ export default function Header() {
       fontWeight: "bold",
       color: "#333",
       textTransform: "none",
-      transition: "all 0.7s ease-in-out", // Transition effektini kuchaytirish
+      transition: "all 0.7s ease-in-out",
       margin: "0 35px",
       position: "relative",
       "&:hover": {
         color: "#FF705D",
-        transform: "translateY(-2px)", // Hover holatida yuqoriga ko'tarish
+        transform: "translateY(-2px)", 
       },
       "&.Mui-selected": {
         width: "200px",
         height: "39px",
         backgroundColor: "#FF705D",
         color: "#fff",
-        borderRadius: "4px", // Chekkalarni yumshatish
-        transform: "scale(1.05)", // Tanlangan tabni biroz kattalashtirish
+        borderRadius: "4px", 
+        transform: "scale(1.05)", 
       },
     },
   }}
