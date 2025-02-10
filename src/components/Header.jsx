@@ -8,7 +8,7 @@ const menuItems = [
   { label: "Фурнитура", link: "/furnitura", submenu: [] },
   { label: "Где купить", link: "/gde-kupit", submenu: [] },
   { label: "Сотрудничать", link: "/sotrudnichat", submenu: [] },
-  { label: "Наши работы", link: "/nashi-raboti", submenu: [] },
+  { label: "Наши работы", link: "/o-kompanii", submenu: [] },
   { label: "Контакты", link: "/kontakti", submenu: [] },
 ];
 
