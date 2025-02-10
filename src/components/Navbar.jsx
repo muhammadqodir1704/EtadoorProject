@@ -38,9 +38,9 @@ const Navbar = () => {
                 <span
                   style={{ fontSize: 34, fontWeight: 400 }}
                   className="text-custom-brown">
-                  +7 499
+                  +998
                 </span>{" "}
-                375 77 65
+                50 009 28 30
               </p>
               </Tooltip>
             </a>
