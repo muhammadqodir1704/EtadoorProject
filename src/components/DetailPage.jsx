@@ -83,7 +83,7 @@ const DetailPage = () => {
 
   return (
     <div>
-      <div className="container mx-auto px-4 py-12 ">
+      <div className="container mx-auto px-4 py-12 z-10">
         <h1 className="font-noto-sans-georgian text-3xl font-bold text-gray-900 mb-6">
           {product.name}
         </h1>
