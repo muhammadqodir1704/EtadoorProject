@@ -57,7 +57,7 @@ const Xarita = () => {
                 key={location.id}
                 className={`items-center p-2 cursor-pointer transition-all duration-300 ${
                   activeLocation === location.id
-                    ? "bg-blue-100 border-custom-red "
+                    ? "bg-blue-100  "
                     : "hover:bg-gray-200"
                 }`}
                 onClick={() => handleCityClick(location.location, location.id)}
