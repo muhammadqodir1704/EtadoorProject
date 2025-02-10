@@ -4,7 +4,7 @@ import { CiViewList } from "react-icons/ci";
 import Logo from "../Images/Frame 3.svg";
 import ZaprositModal from "../Modal/ZaprositModal";
 import ZakazatZvanok from "../Modal/ZakazatZvanok";
-import { FaRocketchat } from "react-icons/fa";
+import { BsChatLeftDots } from "react-icons/bs";
 
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
@@ -81,8 +81,8 @@ const Navbar = () => {
           <Tooltip title="Заказать звонок" placement="top">
           <button 
           onClick={() => window.open("https://t.me/etadoor_bot", "_blank")}
-          style={{fontSize: 28}} className="px-4 py-2 text-white bg-custom-red hover:bg-custom-brown rounded-s-full transition duration-300 ">
-          <FaRocketchat />
+          style={{fontSize: 25}} className="px-4 py-2 text-white bg-custom-red hover:bg-custom-brown rounded-s-full transition duration-300 ">
+          <BsChatLeftDots />
           </button>
           </Tooltip>
           <Tooltip title="Запросить прайс-лист" placement="top">
