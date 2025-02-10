@@ -22,6 +22,7 @@ const DetailPage = () => {
   const [direction, setDirection] = useState(getDirection());
   const [openZakaz, setOpenZakaz] = useState(false);
   const [openZaprosit, setOpenZaprosit] = useState(false);
+  const [selectedColor, setSelectedColor] = useState(null);
 
   useEffect(() => {
     const handleResize = () => setDirection(getDirection());
@@ -206,6 +207,7 @@ const DetailPage = () => {
                 </label>
               ))}
             </div>
+
             <Swiper
               slidesPerView={3}
               direction={direction}
@@ -219,38 +221,40 @@ const DetailPage = () => {
               <SwiperSlide>
                 <button
                   style={{ width: 80, height: 80 }}
-                  className=" bg-red-400 rounded-full border-2 border-gray-300"
-                ></button>
-              </SwiperSlide>
-              <SwiperSlide>
-                {" "}
-                <button
-                  style={{ width: 80, height: 80 }}
-                  className="bg-red-300 rounded-full border-2 border-gray-300"
+                  className={`bg-red-400 rounded-full border-2 transition-all duration-200 ${selectedColor === 'red' ? 'border-[#a78b5a] scale-110' : 'border-gray-300'
+                    }`}
+                  onClick={() => setSelectedColor(selectedColor === 'red' ? null : 'red')}
                 ></button>
               </SwiperSlide>
               <SwiperSlide>
                 <button
                   style={{ width: 80, height: 80 }}
-                  className=" bg-purple-600 rounded-full border-2 border-gray-300"
+                  className={`bg-red-300 rounded-full border-2 transition-all duration-200 ${selectedColor === 'pink' ? 'border-[#a78b5a] scale-110' : 'border-gray-300'
+                    }`}
+                  onClick={() => setSelectedColor(selectedColor === 'pink' ? null : 'pink')}
                 ></button>
               </SwiperSlide>
               <SwiperSlide>
                 <button
                   style={{ width: 80, height: 80 }}
-                  className=" bg-blue-400 rounded-full border-2 border-gray-300"
+                  className={`bg-purple-600 rounded-full border-2 transition-all duration-200 ${selectedColor === 'purple' ? 'border-[#a78b5a] scale-110' : 'border-gray-300'
+                    }`}
+                  onClick={() => setSelectedColor(selectedColor === 'purple' ? null : 'purple')}
+                ></button>
+              </SwiperSlide>
+              <SwiperSlide>
+                <button
+                  style={{ width: 80, height: 80 }}
+                  className={`bg-blue-400 rounded-full border-2 transition-all duration-200 ${selectedColor === 'blue' ? 'border-[#a78b5a] scale-110' : 'border-gray-300'
+                    }`}
+                  onClick={() => setSelectedColor(selectedColor === 'blue' ? null : 'blue')}
                 ></button>
               </SwiperSlide>
 
-              <div
-                style={{ color: "#A08961" }}
-                className="swiper-button-next"
-              ></div>
-              <div
-                style={{ color: "#A08961" }}
-                className="swiper-button-prev"
-              ></div>
+              <div style={{ color: "#A08961" }} className="swiper-button-next"></div>
+              <div style={{ color: "#A08961" }} className="swiper-button-prev"></div>
             </Swiper>
+
 
             <div
               style={{ widht: 570, height: 42, backgroundColor: "#ece7e7" }}
@@ -272,7 +276,7 @@ const DetailPage = () => {
               }}
               className="font-circe text-center"
             >
-              {product.finalPrice} <span style={{fontWeight:400 , fontSize:20}}>руб.</span>
+              {product.finalPrice} <span style={{ fontWeight: 400, fontSize: 20 }}>руб.</span>
             </p>
             <div className="flex items-center">
               <button
@@ -283,28 +287,28 @@ const DetailPage = () => {
                 Заказать
               </button>
               <button
-               onClick={() => setOpenZaprosit(true)}
+                onClick={() => setOpenZaprosit(true)}
                 style={{ width: 277, height: 52 }}
                 className="border border-custom-brown py-3 px-6 text-custom-black  transition-colors duration-300 font-medium ml-4 hover:border-custom-red"
               >
                 Запросить прайс-лист
               </button>
               <ZaprositModal
-              open={openZaprosit}
-              handleClose={() => setOpenZaprosit(false)}
+                open={openZaprosit}
+                handleClose={() => setOpenZaprosit(false)}
               />
-              <Zakaz 
-              open={openZakaz} 
-              handleClose={() => setOpenZakaz(false)} 
-              productData={
-                {
-                  name: product.name,
-                  article: product.article,
-                  color: product.color,
-                  country: "Россия",
-                  availability: "В наличии",
+              <Zakaz
+                open={openZakaz}
+                handleClose={() => setOpenZakaz(false)}
+                productData={
+                  {
+                    name: product.name,
+                    article: product.article,
+                    color: product.color,
+                    country: "Россия",
+                    availability: "В наличии",
+                  }
                 }
-              }
               />
 
             </div>

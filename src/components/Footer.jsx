@@ -40,7 +40,7 @@ const Footer = () => {
               }}>
               <FiPhoneCall className=" text-white" />
             </button>
-            <p className="ms-2">+7 499 375 77 65</p>
+            <p className="ms-2">+998 50 009 28 30</p>
           </li>
           <li className="flex items-start text-xl">
             <button
@@ -114,7 +114,7 @@ const Footer = () => {
       </div>
       <div className="container mx-auto flex gap-4 mt-8 lg:px-36">
         <button
-          className="bg-amber-700 p-2"
+          className="bg-amber-700 p-2 "
           style={{ borderRadius: "50%" }}
           onClick={() => window.open("https://t.me/LS2414", "_blank")}>
           <BsTelegram className="text-white text-2xl" />

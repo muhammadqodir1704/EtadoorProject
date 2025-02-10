@@ -3,8 +3,8 @@ import { useState, useEffect } from "react";
 const Xarita = () => {
   const [locations, setLocations] = useState([]);
   const [selectedCity, setSelectedCity] = useState({
-    center: "55.7558,37.6173", // Moscow center coordinates
-    zoom: 4  // Default zoom level to show multiple cities
+    center: "55.7558,37.6173", 
+    zoom: 4  
   });
 
   useEffect(() => {
@@ -21,10 +21,10 @@ const Xarita = () => {
   }, []);
 
   const handleCityClick = (coords) => {
-    console.log("City clicked with coords:", coords); // Debugging
+    console.log("City clicked with coords:", coords);
     setSelectedCity({
       center: coords,
-      zoom: 11 // Closer zoom when specific city is selected
+      zoom: 11 
     });
   };
 
