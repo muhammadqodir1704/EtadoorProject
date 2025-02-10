@@ -18,6 +18,7 @@ import Sotrudnichat from "./pages/Sotrudnichat";
 import DetailPage from "./components/DetailPage";
 import Okampani from "./pages/Okampani";
 import Sertifikati from "./pages/Sertifikati";
+import Xarita from "./components/Xarita";
 import "./App.css";
 
 const router = createBrowserRouter([
@@ -82,9 +83,9 @@ const router = createBrowserRouter([
         element: <AllProducts />,
       },
       {
-        path: "*",
-        element: <div>404: Страница не найдена</div>,
-      },
+        path: "xarita",
+        element: <Xarita />,
+      }
     ],
   },
 ]);
