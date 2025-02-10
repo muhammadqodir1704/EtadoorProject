@@ -5,16 +5,11 @@ import Logo from "../Images/Frame 3.svg";
 import ZaprositModal from "../Modal/ZaprositModal";
 import ZakazatZvanok from "../Modal/ZakazatZvanok";
 import { BsChatLeftDots } from "react-icons/bs";
-
-import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
-import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 
 const Navbar = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [zakazatZvanok, setZakazatZvanok] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <nav className="p-4 bg-transparent">
@@ -65,19 +60,6 @@ const Navbar = () => {
           </div>
         </ul>
         <div className="flex space-x-4">
-          {/* <button 
-            onClick={() => setZakazatZvanok(true)}
-            className="flex items-center px-4 py-2 border border-custom-brown hover:border-custom-red">
-            <MdOutlinePermPhoneMsg 
-              className="text-custom-red" 
-              style={{ fontSize: 28, marginRight: 10 }} 
-            />
-            <p 
-              className="font-circe" 
-              style={{ fontSize: 14, fontWeight: 700, color: "#142839" }}>
-              Заказать звонок
-            </p>
-          </button> */}
           <Tooltip title="Заказать звонок" placement="top">
           <button 
           onClick={() => window.open("https://t.me/etadoor_bot", "_blank")}
