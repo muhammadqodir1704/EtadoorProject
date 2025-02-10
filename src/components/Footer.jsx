@@ -2,6 +2,7 @@ import myImage from "../Images/angular.png";
 import { CiMail } from "react-icons/ci";
 import { FiPhoneCall } from "react-icons/fi";
 import { TbMapPin } from "react-icons/tb";
+import Navbar from "./Navbar";
 import {
   FaFacebookF,
   FaFileUpload,
@@ -9,12 +10,14 @@ import {
   FaVk,
   FaYoutube,
 } from "react-icons/fa";
-import { MdCall } from "react-icons/md";
-import { BiSolidPhoneCall } from "react-icons/bi";
 import { BsTelegram } from "react-icons/bs";
 import vektor from "../Images/vektor.png";
-
+import ZaprositModal from "../Modal/ZaprositModal";
+import ZakazatZvanok from "../Modal/ZakazatZvanok";
+import { useState } from "react";
 const Footer = () => {
+    const [modalOpen, setModalOpen] = useState(false);
+    const [zakazatZvanok, setZakazatZvanok] = useState(false);
   return (
     <div className="w-full">
       <div className="container mx-auto flex justify-between mt-10 px-4 lg:px-36">
@@ -71,6 +74,7 @@ const Footer = () => {
         </ul>
         <div className="w-70">
           <button
+           onClick={() => setModalOpen(true)}
             style={{
               color: "#142839",
               fontSize: 20,
@@ -83,6 +87,7 @@ const Footer = () => {
             Заказать звонок
           </button>
           <button
+          onClick={() => setModalOpen(true)}
             style={{
               color: "#142839",
               fontSize: 20,
@@ -191,7 +196,13 @@ const Footer = () => {
           </div>
         </div>
       </div>
+        <ZaprositModal open={modalOpen} handleClose={() => setModalOpen(false)} />
+            <ZakazatZvanok
+              open={zakazatZvanok}
+              handleClose={() => setZakazatZvanok(false)}
+            />
     </div>
+    
   );
 };
 

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { FaWhatsapp, FaTelegramPlane } from "react-icons/fa";
-import { MdOutlinePermPhoneMsg } from "react-icons/md";
 import { CiViewList } from "react-icons/ci";
 import Logo from "../Images/Frame 3.svg";
 import ZaprositModal from "../Modal/ZaprositModal";
@@ -25,28 +24,31 @@ const Navbar = () => {
         </div>
         <ul className="flex space-x-6">
           <li>
-            <p
-              style={{
-                fontFamily: "Noto Sans Georgian",
-                fontWeight: 700,
-                fontSize: 32,
-                color: "#142839",
-              }}>
-              <span
-                style={{ fontSize: 34, fontWeight: 400 }}
-                className="text-custom-brown">
-                +7 499
-              </span>{" "}
-              375 77 65
-            </p>
+            <a href="tel:+74993757765" className="hover:opacity-90">
+              <p
+                style={{
+                  fontFamily: "Noto Sans Georgian",
+                  fontWeight: 700,
+                  fontSize: 32,
+                  color: "#142839",
+                }}>
+                <span
+                  style={{ fontSize: 34, fontWeight: 400 }}
+                  className="text-custom-brown">
+                  +7 499
+                </span>{" "}
+                375 77 65
+              </p>
+            </a>
           </li>
+
           <div className="flex space-x-2">
-            <button 
+            <button
               className="px-4 py-2 text-white rounded-md bg-custom-brown"
               onClick={() => window.open("https://www.whatsapp.com/", "_blank")}>
               <FaWhatsapp style={{ fontSize: 28 }} />
             </button>
-            <button 
+            <button
               className="px-4 py-2 text-white rounded-md bg-custom-brown"
               onClick={() => window.open("https://t.me/etadoor_bot", "_blank")}>
               <FaTelegramPlane style={{ fontSize: 28 }} />
