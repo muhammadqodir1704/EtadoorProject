@@ -24,7 +24,6 @@
 
 .scroll-container::-webkit-scrollbar-thumb {
   background-color: #ff6f55;
-  border-radius: 4px;
 }
 
 .scroll-container::-webkit-scrollbar-thumb:hover {
@@ -40,7 +39,6 @@
   transition: border 0.3s ease-in-out;
 }
 
-/* LI tanlanganda qizil border chiqadi */
 .scroll-container li:hover {
   border: 2px solid #FF6F55;
 }

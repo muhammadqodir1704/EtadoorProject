@@ -95,11 +95,11 @@ const Kontakti = () => {
                   className="bg-amber-700 p-2"
                   style={{ borderRadius: "50%" }}
                   onClick={() =>
-                    window.open("https://t.me/etadoor_bot", "_blank")
+                    window.open("https://t.me/proffdev", "_blank")
                   }>
                   <BsTelegram className="text-white" />
                 </button>
-                <p className="ms-2">User</p>
+                <p className="ms-2">proffdev</p>
               </li>
             </ul>
           </div>

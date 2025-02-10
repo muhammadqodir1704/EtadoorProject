@@ -6,7 +6,6 @@ import Frame4 from "../assets/Frame4.png";
 import Dverxiy from "../components/Dverxiy";
 import { Link } from "react-router-dom";
 import EtadoorImg from "../components/EtadoorImg";
-import { p } from "framer-motion/client";
 
 const Sotrudnichat = () => {
   const items = [
@@ -18,7 +17,7 @@ const Sotrudnichat = () => {
     {
       img: Frame2,
       text: "Широкий ассортимент продукции",
-      path: "/allProducts"
+      path: "/pogonaj"
     },
     {
       img: Frame3,
@@ -28,7 +27,7 @@ const Sotrudnichat = () => {
     {
       img: Frame4,
       text: "Доставка по всей территории РФ",
-      path: "/dostavka" 
+      path: "/kontakti"
     },
   ];
 
