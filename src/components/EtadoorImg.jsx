@@ -85,7 +85,6 @@ const EtadoorImg = () => {
             />
           </div>
         </div>
-        {/* part two */}
         <div
           style={{ marginLeft: 380 }}
           className="flex justify-center items-center relative">
@@ -112,19 +111,6 @@ const EtadoorImg = () => {
           <p style={{ fontSize: 20 }} className="-mt-10 z-10 -ml-5">
             Высокое сопротивление <br /> теплопередаче
           </p>
-          <Box sx={{ width: 300 }}>
-            <Grid container sx={{ justifyContent: "center" }}>
-              <Grid item>
-                <Tooltip
-                  title="Композитные материалы, используемые при производстве дверей «EtaDoor» имеют сопротивление теплопередаче до 5 раз больше, чем древесные материалы из которых изготавливаются обычные двери"
-                  placement="top-start">
-                  <Button>
-                    <img src={Toltip} alt="" />
-                  </Button>
-                </Tooltip>
-              </Grid>
-            </Grid>
-          </Box>
           <p style={{ fontSize: 20 }} className="mt-10 -ml-28 z-10">
             Низкая эмиссия вредных веществ
           </p>
@@ -135,7 +121,21 @@ const EtadoorImg = () => {
             Легкость монтажа
           </p>
         </div>
+        <div
+          style={{ marginTop: -300, marginLeft: 1150 }}
+          className="flex flex-col">
+          <p style={{ fontSize: 20 }} className="-mt-10 z-10 -ml-28">
+            Высокая химическая и бактериологическая стойкость
+          </p>
+          <p style={{ fontSize: 20 }} className="mt-10 -ml-28 z-10">
+            Влагостойкость 100%          </p>
+          <p style={{ fontSize: 20 }} className="mt-20  z-10 -ml-28">
+            Эффект Лотоса          </p>
+          <p style={{ fontSize: 20 }} className="mt-16 z-10 -ml-28">
+            Высокая звукоизоляция          </p>
+        </div>
       </div>
+
     </div>
   );
 };
