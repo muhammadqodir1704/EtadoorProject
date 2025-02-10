@@ -43,25 +43,48 @@ export default function Header() {
   };
 
   return (
-    <Box>
-      <Tabs
-        value={value}
-        onChange={handleChange}
-        centered
-        sx={{
-          "& .MuiTabs-indicator": { display: "none" },
-          "& .MuiTab-root": {
-            fontWeight: "bold",
-            color: "#333",
-            textTransform: "none",
-            transition: "background 0.3s",
-            "&.Mui-selected": {
-              backgroundColor: "#FF705D",
-              color: "#fff",
-              borderRadius: "5px",
-            },
-          },
-        }}>
+    <Box
+      sx={{ flexGrow: 1 }}
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
+      bgcolor="#fff"
+      boxShadow="0px 1px 5px rgba(0, 0, 0, 0.1)"
+      position="sticky"
+      top="0"
+      zIndex="999"
+    >
+   <Tabs
+  value={value}
+  onChange={handleChange}
+  centered
+  sx={{
+    "& .MuiTabs-indicator": { 
+      display: "none" 
+    },
+    "& .MuiTab-root": {
+      fontWeight: "bold",
+      color: "#333",
+      textTransform: "none",
+      transition: "all 0.7s ease-in-out", // Transition effektini kuchaytirish
+      margin: "0 35px",
+      position: "relative",
+      "&:hover": {
+        color: "#FF705D",
+        transform: "translateY(-2px)", // Hover holatida yuqoriga ko'tarish
+      },
+      "&.Mui-selected": {
+        width: "200px",
+        height: "39px",
+        backgroundColor: "#FF705D",
+        color: "#fff",
+        borderRadius: "4px", // Chekkalarni yumshatish
+        transform: "scale(1.05)", // Tanlangan tabni biroz kattalashtirish
+      },
+    },
+  }}
+>
+
         {menuItems.map((item, index) => (
           <Tab
             key={index}
