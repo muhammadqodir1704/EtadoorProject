@@ -12,7 +12,7 @@ const RootLayout = () => {
       <Navbar />
       <Header />
       <main> <Outlet /> </main>
-      <Xarita />
+      {/* <Xarita /> */}
       <Footer />
        <ScrollToTopButton />
        <ChatBot />

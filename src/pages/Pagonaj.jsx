@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import Xarita from "../components/Xarita";
 const Pagonaj = () => {
   const columns = [
     {
@@ -169,6 +169,7 @@ const Pagonaj = () => {
           </div>
         ))}
       </div>
+      <Xarita/>
     </div>
   );
 };
