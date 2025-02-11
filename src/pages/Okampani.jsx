@@ -12,7 +12,7 @@ import img8 from "../assets/nashi8.jpg";
 import img9 from "../assets/nashi9.jpg";
 import img10 from "../assets/nashi10.jpg";
 import img11 from "../assets/nashi11.jpg";
-
+import Xarita from "../components/Xarita";
 const Okampani = () => {
   const colums = [
     { img: img1, title: "ТК Ивеко Московская область" },
@@ -60,6 +60,7 @@ const Okampani = () => {
           </div>
         ))}
       </div>
+      <Xarita/>
     </div>
   );
 };

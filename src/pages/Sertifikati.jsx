@@ -9,7 +9,6 @@ import { Image } from "antd";
 
 // import required modules
 import { Pagination } from 'swiper/modules';
-
 export default function Sertifikati() {
     return (
         <>

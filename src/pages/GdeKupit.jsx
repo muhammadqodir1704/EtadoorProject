@@ -1,5 +1,4 @@
 import React from "react";
-import Footer from "../components/Footer";
 import Xarita from "../components/Xarita";
 import EtadoorImg from "../components/EtadoorImg";
 import { Link } from "react-router-dom";
