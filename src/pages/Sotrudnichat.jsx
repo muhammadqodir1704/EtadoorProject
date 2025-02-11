@@ -6,6 +6,8 @@ import Frame4 from "../assets/Frame4.png";
 import Dverxiy from "../components/Dverxiy";
 import { Link } from "react-router-dom";
 import EtadoorImg from "../components/EtadoorImg";
+import Xarita from "../components/Xarita";
+import Sertifikati from "./Sertifikati";
 
 const Sotrudnichat = () => {
   const items = [
@@ -63,6 +65,8 @@ const Sotrudnichat = () => {
       </div>
       <EtadoorImg />
       <Dverxiy />
+      <Sertifikati />
+      <Xarita />
     </>
   );
 };

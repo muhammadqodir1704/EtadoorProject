@@ -1,19 +1,14 @@
 import React from "react";
-import { BiSolidPhoneCall } from "react-icons/bi";
 import { BsTelegram } from "react-icons/bs";
 import { CiMail } from "react-icons/ci";
 import {
-  FaFacebookF,
-  FaFileUpload,
-  FaInstagram,
   FaRegClock,
-  FaVk,
-  FaYoutube,
 } from "react-icons/fa";
 import { FiPhoneCall } from "react-icons/fi";
-import { MdCall } from "react-icons/md";
 import { TbMapPin } from "react-icons/tb";
 import { Link } from "react-router-dom";
+import Sertifikati from "./Sertifikati";
+import Xarita from "../components/Xarita";
 const Kontakti = () => {
   return (
     <div className="container mx-auto p-6 rounded-lg">
@@ -116,6 +111,7 @@ const Kontakti = () => {
           </div>
         </div>
       </div>
+      <Sertifikati />
     </div>
   );
 };

@@ -4,7 +4,6 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RootLayout from "./Layout/RootLayout";
 import MainPage from "./components/MainPage";
 import AllProducts from "./components/AllProducts";
-// import Filter from "./components/Filter";
 import Rasm from "./components/Rasm";
 import Input from "./components/Input";
 import EtadoorImg from "./components/EtadoorImg";
@@ -38,6 +37,7 @@ const router = createBrowserRouter([
             <EtadoorImg />
             <Dverxiy />
             <Sertifikati />
+            <Xarita />
           </>
         ),
       },
