@@ -13,6 +13,7 @@ const GdeKupit = () => {
         Где купить
         </Link>
         </div>
+      <Xarita/>
       <EtadoorImg />
       <hr className="border-2 border-amber-700 mt-24" />
     </>
