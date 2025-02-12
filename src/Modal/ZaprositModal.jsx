@@ -108,7 +108,6 @@ export default function ZaprositModal({ open, handleClose }) {
               />
             </div>
 
-            {/* Loader yoki Submit tugmasi */}
             <div className="flex items-center mt-4 gap-8">
               <p style={{ fontSize: 12, fontWeight: 400 }} className="font-circe">
                 Нажимая на кнопку, вы даете согласие с <br /> Политикой конфиденциальности
