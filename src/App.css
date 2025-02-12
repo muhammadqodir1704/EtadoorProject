@@ -12,7 +12,6 @@
   list-style: none;
 }
 
-/* Chrome, Edge, va Safari uchun */
 .scroll-container::-webkit-scrollbar {
   width: 6px;
 }
@@ -30,7 +29,6 @@
   background-color: darkred;
 }
 
-/* LI elementlarining default holati */
 .scroll-container li {
   width: 400px;
   padding: 5px;
