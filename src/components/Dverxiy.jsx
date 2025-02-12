@@ -1,23 +1,33 @@
 import React, { useState } from "react";
-import dverxi from "../assets/dvexi2.svg";
+import { createClient } from "@supabase/supabase-js";
 import email from "../assets/email.png";
+
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
 const Dverxiy = () => {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const formData = {
-      name,
-      phone,
-    };
+    setLoading(true);
 
-    console.log("Form jo‘natildi:", formData);
-    alert("Zayavka muvaffaqiyatli yuborildi!");
+    const { data, error } = await supabase.from("Dealers").insert([{ name, phone }]);
 
-    setName("");
-    setPhone("");
+    if (error) {
+      console.error("Xatolik:", error.message);
+      alert("Xatolik yuz berdi, iltimos qaytadan urinib ko'ring.");
+    } else {
+      console.log("Muvaffaqiyatli saqlandi:", data);
+      alert("Zayavka muvaffaqiyatli yuborildi!");
+      setName("");
+      setPhone("");
+    }
+
+    setLoading(false);
   };
 
   return (
@@ -42,22 +52,26 @@ const Dverxiy = () => {
               className="block w-full max-w-md px-4 py-2 mb-4 text-sm border border-gray-300 rounded-lg sm:text-base focus:outline-none focus:ring-2 focus:ring-custom-red focus:border-custom-red"
               type="text"
               placeholder="Ваше имя"
+              required
             />
             <input
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
               className="block w-full max-w-md px-4 py-2 mb-4 text-sm border border-gray-300 rounded-lg sm:text-base focus:outline-none focus:ring-2 focus:ring-custom-red focus:border-custom-red"
-              type="number"
+              type="tel"
               placeholder="Телефон"
+              required
             />
             <span className="block max-w-md mb-4 text-xs leading-tight text-gray-600 sm:text-sm">
-              Нажимая на кнопку, вы даете согласие с Политикой
-              конфиденциальности
+              Нажимая на кнопку, вы даете согласие с Политикой конфиденциальности
             </span>
             <button
               type="submit"
-              className="px-6 py-3 text-sm text-white bg-red-500 rounded-lg sm:text-base hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-400">
-              Отправить заявку
+              disabled={loading}
+              className={`px-6 py-3 text-sm text-white rounded-lg sm:text-base focus:outline-none focus:ring-2 ${
+                loading ? "bg-gray-400" : "bg-red-500 hover:bg-red-600 focus:ring-red-400"
+              }`}>
+              {loading ? "Yuborilmoqda..." : "Отправить заявку"}
             </button>
           </form>
         </div>
