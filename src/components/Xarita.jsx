@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 const Xarita = () => {
   const [locations, setLocations] = useState([]);
   const [selectedCity, setSelectedCity] = useState({
-    center: "41.2995,69.2401", // Toshkent koordinatalari default holatda
+    center: "41.2995,69.2401", 
     zoom: 6
   });
   const [activeLocation, setActiveLocation] = useState(null);
