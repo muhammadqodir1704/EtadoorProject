@@ -8,7 +8,6 @@ import { FiPhoneCall } from "react-icons/fi";
 import { TbMapPin } from "react-icons/tb";
 import { Link } from "react-router-dom";
 import Sertifikati from "./Sertifikati";
-import Xarita from "../components/Xarita";
 const Kontakti = () => {
   return (
     <div className="container mx-auto p-6 rounded-lg">
