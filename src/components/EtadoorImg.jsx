@@ -18,7 +18,6 @@ import Img10 from "../Images/Group 62 (1).svg";
 import Img11 from "../Images/Group 22 (1).svg";
 import Img12 from "../Images/Group 60.svg";
 
-// Right Side
 import Img13 from "../Images/RightS1.svg";
 import Img14 from "../Images/RightIcon1.svg";
 import Img15 from "../Images/Group 46.svg";
