@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-// select ui
 
 const SimilarProduct = () => {
     const [products, setProducts] = useState([]);
